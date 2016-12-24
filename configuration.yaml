@@ -34,6 +34,7 @@ zwave:
 emulated_hue:
   type: alexa
   host_ip: 192.168.1.147
+  expose_by_default: false
 device_tracker:
   platform: unifi
   username: !secret unifi_username
@@ -45,7 +46,7 @@ alarm_control_panel:
 
 group:
   living:
-    name: Living room
+    name: Living room lights
     view: no
     entities:
       - light.ge_unknown_type4944_id3033_level_2_0

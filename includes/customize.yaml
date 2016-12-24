@@ -1,8 +1,10 @@
   switch.wemo_switch:
     friendly_name: Christmas lights
     icon: mdi:pine-tree
+    emulated_hue: true
   light.ge_unknown_type4944_id3033_level_2_0:
-    friendly_name: Living room lights
+    friendly_name: Living room can lights
+    emulated_hue: true
   media_player.office:
     hidden: true
   light.light_1:
@@ -13,6 +15,9 @@
     hidden: true
   light.the_lamp:
     friendly_name: Living room lamp
+    emulated_hue: true
+  group.living:
+    emulated_hue: true
 
   #device tracking
   device_tracker.chromecast:
@@ -44,4 +49,6 @@
   device_tracker.a002dc80b90e:
     hidden: true
   device_tracker.a48d3b15718c:
+    hidden: true
+  device_tracker.foxyiphone:
     hidden: true
