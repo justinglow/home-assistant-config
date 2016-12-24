@@ -1,0 +1,45 @@
+  switch.wemo_switch:
+    friendly_name: Christmas lights
+    icon: mdi:pine-tree
+  light.ge_unknown_type4944_id3033_level_2_0:
+    friendly_name: Living room lights
+  media_player.office:
+    hidden: true
+  light.light_1:
+    hidden: true
+  light.light_2:
+    hidden: true
+  media_player.roku_5s4640042419:
+    hidden: true
+  light.the_lamp:
+    friendly_name: Living room lamp
+
+  #device tracking
+  device_tracker.chromecast:
+    hidden: true
+  device_tracker.echo:
+    hidden: true
+  device_tracker.justinsipad:
+    hidden: true
+  device_tracker.justinsmacbook:
+    hidden: true
+  device_tracker.kindle0ee573d00:
+    hidden: true
+  device_tracker.roku_stick__419:
+    hidden: true
+  device_tracker.rp3:
+    hidden: true
+  device_tracker.wemo_switch:
+    hidden: true
+  device_tracker.justins_phone:
+    friendly_name: Justin
+    track: true
+    hide_if_away: no
+  device_tracker.kelleys_phone:
+    friendly_name: Kelley
+    track: true
+    hide_if_away: no
+  device_tracker.kelleysair:
+    hidden: true
+  device_tracker.a002dc80b90e:
+    hidden: true

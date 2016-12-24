@@ -1,0 +1,101 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 171.3
+  unit_system: imperial
+  time_zone: America/Chicago
+  customize: !include includes/customize.yaml
+
+zone:
+  name: home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  icon: mdi:home
+  radius: 500
+
+frontend:
+updater:
+history:
+logbook:
+
+http:
+ api_password: !secret http_password
+
+###################
+#### Componets ####
+###################
+
+sun:
+discovery:
+wemo:
+zwave:
+  usb_path: /dev/ttyACM0
+emulated_hue:
+  type: alexa
+  host_ip: 192.168.1.147
+device_tracker:
+  platform: unifi
+  username: !secret unifi_username
+  password: !secret unifi_password
+alarm_control_panel:
+  platform: simplisafe
+  username: !secret simplisafe_username
+  password: !secret simplisafe_password
+
+group:
+  living:
+    name: Living room
+    view: no
+    entities:
+      - light.ge_unknown_type4944_id3033_level_2_0
+      - switch.wemo_switch
+      - light.the_lamp
+  all_lights:
+    name: All lights
+    view: no
+    entities:
+      - light.ge_unknown_type4944_id3033_level_2_0
+      - switch.wemo_switch
+      - light.the_lamp
+
+automation:
+  - alias: Living room lights on at sunset
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: sun
+      event: sunset
+    action:
+      service: scene.turn_on
+      entity_id: scene.evening
+  - alias: Christmas lights on when Kelley comes home
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: state
+      entity_id: device_tracker.kelleys_phone
+      state: 'home'
+    action:
+      service: homeassistant.turn_on
+      entity_id: switch.wemo_switch
+  - alias: Turn alarm off in the morning
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: time
+      after: '06:45:00'
+    action:
+      entity_id: alarm_control_panel.simplisafe
+      service: alarm_control_panel.alarm_disarm
+
+scene:
+  name: Evening
+  entities:
+    light.ge_unknown_type4944_id3033_level_2_0:
+      state: on
+      brightness: 130
+    light.the_lamp:
+      state: on
+      brightness: 130
+    switch.wemo_switch: on
