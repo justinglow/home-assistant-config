@@ -18,6 +18,14 @@
     emulated_hue: true
   group.living:
     emulated_hue: true
+  switch.ge_12727_inwall_smart_switch_toggle_switch_3_0:
+    friendly_name: Porch light
+    emulated_hue: true
+    icon: mdi:home-variant
+    switch.ge_12727_inwall_smart_switch_toggle_switch_4_0:
+      friendly_name: Coach lights
+      emulated_hue: true
+      icon: mdi:home-variant
 
   #device tracking
   device_tracker.chromecast:
