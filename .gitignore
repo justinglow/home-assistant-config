@@ -17,3 +17,6 @@ home-assistant.*
 *.sqlite
 *.xml
 *.backup
+.DS_Store
+.HA_VERSION
+._.DS_Store
