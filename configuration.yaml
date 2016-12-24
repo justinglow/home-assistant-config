@@ -98,7 +98,7 @@ automation:
       platform: sun
       event: sunrise
     action:
-      service: scene.turn_off
+      service: switch.turn_off
       entity_id:
         - switch.ge_12727_inwall_smart_switch_toggle_switch_3_0
         - switch.ge_12727_inwall_smart_switch_toggle_switch_4_0
@@ -109,7 +109,7 @@ automation:
       platform: sun
       event: sunset
     action:
-      service: scene.turn_on
+      service: switch.turn_on
       entity_id:
         - switch.ge_12727_inwall_smart_switch_toggle_switch_3_0
         - switch.ge_12727_inwall_smart_switch_toggle_switch_4_0
