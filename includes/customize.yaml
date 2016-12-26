@@ -60,3 +60,13 @@
     hidden: true
   device_tracker.foxyiphone:
     hidden: true
+  scene.evening:
+    hidden: true
+  device_tracker.kindle2e920942f:
+    hidden: true
+  device_tracker.kindle2b80e342b:
+    hidden: true
+  device_tracker.kerrysiphone:
+    hidden: true
+  device_tracker.iphone:
+    hidden: true

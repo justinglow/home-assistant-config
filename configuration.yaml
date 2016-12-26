@@ -39,6 +39,8 @@ device_tracker:
   platform: unifi
   username: !secret unifi_username
   password: !secret unifi_password
+  track_new_devices: false
+  consider_home: 30
 alarm_control_panel:
   platform: simplisafe
   username: !secret simplisafe_username
@@ -108,6 +110,7 @@ automation:
     trigger:
       platform: sun
       event: sunset
+      offset: "-00:10:00"
     action:
       service: switch.turn_on
       entity_id:
