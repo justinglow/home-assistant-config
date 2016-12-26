@@ -1,0 +1,9 @@
+  name: Evening
+  entities:
+    light.ge_unknown_type4944_id3033_level_2_0:
+      state: on
+      brightness: 130
+    light.the_lamp:
+      state: on
+      brightness: 130
+    switch.wemo_switch: on

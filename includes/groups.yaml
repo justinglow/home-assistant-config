@@ -1,0 +1,16 @@
+  living:
+    name: Living room lights
+    view: no
+    entities:
+      - light.ge_unknown_type4944_id3033_level_2_0
+      - switch.wemo_switch
+      - light.the_lamp
+  all_lights:
+    name: All lights
+    view: no
+    entities:
+      - light.ge_unknown_type4944_id3033_level_2_0
+      - switch.wemo_switch
+      - light.the_lamp
+      - switch.ge_12727_inwall_smart_switch_toggle_switch_3_0
+      - switch.ge_12727_inwall_smart_switch_toggle_switch_4_0
