@@ -1,3 +1,7 @@
+################################################
+## lights
+################################################
+
   - alias: Living room lights on at sunset
     initial_state: True
     hide_entity: False
@@ -7,6 +11,7 @@
     action:
       service: scene.turn_on
       entity_id: scene.evening
+
   - alias: Christmas lights on when Kelley comes home
     initial_state: True
     hide_entity: False
@@ -17,15 +22,7 @@
     action:
       service: homeassistant.turn_on
       entity_id: switch.wemo_switch
-  - alias: Turn alarm off in the morning
-    initial_state: True
-    hide_entity: False
-    trigger:
-      platform: time
-      after: '06:45:00'
-    action:
-      entity_id: alarm_control_panel.simplisafe
-      service: alarm_control_panel.alarm_disarm
+
   - alias: Outside lights off at sunrise
     initial_state: True
     hide_entity: False
@@ -37,6 +34,7 @@
       entity_id:
         - switch.ge_12727_inwall_smart_switch_toggle_switch_3_0
         - switch.ge_12727_inwall_smart_switch_toggle_switch_4_0
+
   - alias: Outside lights on at sunset
     initial_state: True
     hide_entity: False
@@ -49,3 +47,17 @@
       entity_id:
         - switch.ge_12727_inwall_smart_switch_toggle_switch_3_0
         - switch.ge_12727_inwall_smart_switch_toggle_switch_4_0
+
+################################################
+## alarm
+################################################
+
+  - alias: Turn alarm off in the morning
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: time
+      after: '06:45:00'
+    action:
+      entity_id: alarm_control_panel.simplisafe
+      service: alarm_control_panel.alarm_disarm
