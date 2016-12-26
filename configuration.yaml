@@ -18,35 +18,34 @@ frontend:
 updater:
 history:
 logbook:
+discovery:
 
 http:
  api_password: !secret http_password
 
-###################
-#### Componets ####
-###################
-
 sun:
 
-discovery:
 wemo:
+
 zwave:
   usb_path: /dev/ttyACM0
+
 emulated_hue:
   type: alexa
   host_ip: 192.168.1.147
   expose_by_default: false
+
 device_tracker:
   platform: unifi
   username: !secret unifi_username
   password: !secret unifi_password
   track_new_devices: false
   consider_home: 30
+
 alarm_control_panel:
   platform: simplisafe
   username: !secret simplisafe_username
   password: !secret simplisafe_password
-
 
 automation: !include includes/automations.yaml
 group: !include includes/groups.yaml
