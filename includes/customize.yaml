@@ -26,6 +26,8 @@
     friendly_name: Coach lights
     emulated_hue: true
     icon: mdi:home-variant
+  group.all_automations:
+    hidden: False
 
   #device tracking
   device_tracker.chromecast:
@@ -70,3 +72,18 @@
     hidden: true
   device_tracker.iphone:
     hidden: true
+
+
+  sensor.dark_sky_temperature:
+    friendly_name: Outside temp
+  sensor.dark_sky_daily_low_temperature:
+    friendly_name: Today's low
+    icon: mdi:elevation-decline
+  sensor.dark_sky_daily_high_temperature:
+    friendly_name: Today's high
+    icon: mdi:elevation-rise
+  sensor.dark_sky_humidity:
+    friendly_name: Humidity
+  sensor.dark_sky_precip_probability:
+    friendly_name: Chance of rain
+    icon: mdi:weather-rainy

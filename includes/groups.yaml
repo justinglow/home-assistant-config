@@ -3,10 +3,12 @@
     entities:
       - group.living
       - group.all_lights
-      - camera.todays_outlook
       - camera.playroom
+      - group.family
+      - group.weather
+      - group.all_automations
   living:
-    name: Living room lights
+    name: Living room
     view: no
     entities:
       - light.ge_unknown_type4944_id3033_level_2_0
@@ -22,8 +24,19 @@
       - switch.ge_12727_inwall_smart_switch_toggle_switch_3_0
       - switch.ge_12727_inwall_smart_switch_toggle_switch_4_0
   weather:
-    name: weather
-    view: yes
+    name: Weather
+    view: no
     entities:
-      - camera.todays_outlook
-      - camera.tomorrows_outlook
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_daily_low_temperature
+      - sensor.dark_sky_daily_high_temperature
+      - sensor.dark_sky_humidity
+      - sensor.dark_sky_precip_probability
+      - sun.sun
+  family:
+    name: Family
+    view: no
+    entities:
+      - device_tracker.kelleys_phone
+      - device_tracker.justins_phone
+      - alarm_control_panel.simplisafe

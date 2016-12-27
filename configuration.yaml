@@ -58,18 +58,17 @@ media_player:
       - plex
       - netflix
       - hdmi1
+sensor:
+  platform: darksky
+  api_key: !secret darksky_api_key
+  monitored_conditions:
+    - temperature
+    - temperature_max
+    - temperature_min
+    - humidity
+    - precip_probability
 
 camera:
-  platform: generic
-  still_image_url: http://www.spc.noaa.gov/products/outlook/day1otlk_1630.gif
-  name: Today's outlook
-
-camera 2:
-  platform: generic
-  still_image_url: http://www.spc.noaa.gov/products/outlook/day2otlk_1730.gif
-  name: Tomorrow's outlook
-
-camera 3:
   platform: generic
   still_image_url: http://192.168.1.151:7777/cgi-bin/snapshot.cgi?1
   username: admin
