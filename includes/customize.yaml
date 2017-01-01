@@ -2,27 +2,29 @@
     friendly_name: Christmas lights
     icon: mdi:pine-tree
     emulated_hue: true
-  light.ge_unknown_type4944_id3033_level_2_0:
-    friendly_name: Living room can lights
+  light.living_ceiling_level_2_0:
+    friendly_name: Living room ceiling
     emulated_hue: true
-  media_player.office:
-    hidden: true
+  light.cafe_level_5_0:
+    friendly_name: Cafe lights
+    emulated_hue: true
+  light.island_level_6_0:
+    friendly_name: Island lights
+    emulated_hue: true
   light.light_1:
     hidden: true
   light.light_2:
-    hidden: true
-  media_player.roku_5s4640042419:
     hidden: true
   light.the_lamp:
     friendly_name: Living room lamp
     emulated_hue: true
   group.living:
     emulated_hue: true
-  switch.ge_12727_inwall_smart_switch_toggle_switch_3_0:
+  switch.porch_switch_3_0:
     friendly_name: Porch light
     emulated_hue: true
     icon: mdi:home-variant
-  switch.ge_12727_inwall_smart_switch_toggle_switch_4_0:
+  switch.coach_switch_4_0:
     friendly_name: Coach lights
     emulated_hue: true
     icon: mdi:home-variant
@@ -87,3 +89,13 @@
   sensor.dark_sky_precip_probability:
     friendly_name: Chance of rain
     icon: mdi:weather-rainy
+
+  media_player.office:
+    friendly_name: Office Chromecast
+    hidden: true
+  media_player.office_tv:
+    friendly_name: Office TV
+    hidden: true
+  media_player.roku_5s4640042419:
+    friendly_name: Playroom TV
+    hidden: true

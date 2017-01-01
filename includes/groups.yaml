@@ -3,26 +3,36 @@
     entities:
       - group.living
       - group.all_lights
-      - camera.playroom
+     #- camera.playroom
       - group.family
       - group.weather
-      - group.all_automations
+     #- group.all_automations
+      - group.media
+      - group.kitchen
   living:
     name: Living room
     view: no
     entities:
-      - light.ge_unknown_type4944_id3033_level_2_0
+      - light.living_ceiling_level_2_0
       - switch.wemo_switch
       - light.the_lamp
+  kitchen:
+    name: Kitchen
+    view: no
+    entities:
+      - light.cafe_level_5_0
+      - light.island_level_6_0
   all_lights:
     name: All lights
     view: no
     entities:
-      - light.ge_unknown_type4944_id3033_level_2_0
+      - light.living_ceiling_level_2_0
       - switch.wemo_switch
       - light.the_lamp
-      - switch.ge_12727_inwall_smart_switch_toggle_switch_3_0
-      - switch.ge_12727_inwall_smart_switch_toggle_switch_4_0
+      - switch.porch_switch_3_0
+      - switch.coach_switch_4_0
+      - light.cafe_level_5_0
+      - light.island_level_6_0
   weather:
     name: Weather
     view: no
@@ -40,3 +50,10 @@
       - device_tracker.kelleys_phone
       - device_tracker.justins_phone
       - alarm_control_panel.simplisafe
+  media:
+    name: media
+    view: no
+    entities:
+      - media_player.office
+      - media_player.office_tv
+      - media_player.roku_5s4640042419

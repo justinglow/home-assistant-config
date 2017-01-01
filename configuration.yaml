@@ -27,6 +27,12 @@ sun:
 
 wemo:
 
+mqtt:
+  broker: m13.cloudmqtt.com
+  port: 10694
+  username: pfvpaiyc
+  password: 3Yy9aU3oFxRa
+
 zwave:
   usb_path: /dev/ttyACM0
 
@@ -41,6 +47,9 @@ device_tracker:
   password: !secret unifi_password
   track_new_devices: false
   consider_home: 30
+  #platform: owntracks
+
+
 
 alarm_control_panel:
   platform: simplisafe
@@ -68,12 +77,12 @@ sensor:
     - humidity
     - precip_probability
 
-camera:
-  platform: generic
-  still_image_url: http://192.168.1.151:7777/cgi-bin/snapshot.cgi?1
-  username: admin
-  password: !secret playroom_camera_password
-  name: Playroom
+#camera:
+#  platform: generic
+#  still_image_url: http://192.168.1.151:7777/cgi-bin/snapshot.cgi?1
+#  username: admin
+#  password: !secret playroom_camera_password
+#  name: Playroom
 
 automation: !include includes/automations.yaml
 group: !include includes/groups.yaml
