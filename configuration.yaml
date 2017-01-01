@@ -31,7 +31,7 @@ mqtt:
   broker: m13.cloudmqtt.com
   port: 10694
   username: pfvpaiyc
-  password: 3Yy9aU3oFxRa
+  password: !secret cloudmqtt_password
 
 zwave:
   usb_path: /dev/ttyACM0
