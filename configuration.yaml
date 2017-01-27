@@ -49,8 +49,6 @@ device_tracker:
   consider_home: 30
   #platform: owntracks
 
-
-
 alarm_control_panel:
   platform: simplisafe
   username: !secret simplisafe_username

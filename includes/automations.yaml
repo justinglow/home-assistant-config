@@ -1,27 +1,69 @@
 ################################################
-## lights
+## inside lights
 ################################################
 
-  - alias: Living room lights on at sunset
+  - alias: Lights on in the morning
     initial_state: True
     hide_entity: False
     trigger:
+      platform: time
+      after: '06:45:00'
+    action:
+      service: scene.turn_on
+      entity_id: scene.morning
+
+  - alias: Lights off in the morning on weekdays
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: time
+      after: '08:45:00'
+    condition:
+      condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    action:
+      service: scene.turn_on
+      entity_id: scene.all_off
+
+  - alias: Lights on an hour before sunset
+    initial_state: True
+    trigger:
       platform: sun
       event: sunset
+      offset: "-01:00:00"
     action:
       service: scene.turn_on
       entity_id: scene.evening
 
-  - alias: Christmas lights on when Kelley comes home
+  - alias: Turn off lights when alarm is armed
     initial_state: True
     hide_entity: False
     trigger:
       platform: state
-      entity_id: device_tracker.kelleys_phone
-      state: 'home'
+      entity_id: alarm_control_panel.simplisafe
+      state: 'armed_home'
     action:
-      service: homeassistant.turn_on
-      entity_id: switch.wemo_switch
+      service: scene.turn_on
+      entity_id: scene.bedtime
+
+  - alias: All lights off at night
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: time
+      after: '23:30:00'
+    action:
+     service: scene.turn_on
+     entity_id: scene.all_off
+
+##################
+# Outside lights #
+##################
 
   - alias: Outside lights off at sunrise
     initial_state: True
@@ -41,7 +83,7 @@
     trigger:
       platform: sun
       event: sunset
-      offset: "-00:10:00"
+      offset: "-00:20:00"
     action:
       service: switch.turn_on
       entity_id:
@@ -61,14 +103,3 @@
     action:
       entity_id: alarm_control_panel.simplisafe
       service: alarm_control_panel.alarm_disarm
-
-  - alias: Turn off lights when alarm is armed
-    initial_state: True
-    hide_entity: False
-    trigger:
-      platform: state
-      entity_id: alarm_control_panel.simplisafe
-      state: 'armed_home'
-    action:
-      service: homeassistant.turn_off
-      entity_id: group.all_lights

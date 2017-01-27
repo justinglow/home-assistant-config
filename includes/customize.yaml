@@ -1,6 +1,6 @@
   switch.wemo_switch:
-    friendly_name: Christmas lights
-    icon: mdi:pine-tree
+    friendly_name: Small lamp
+    icon: mdi:lamp
     emulated_hue: true
   light.living_ceiling_level_2_0:
     friendly_name: Living room ceiling
@@ -11,13 +11,34 @@
   light.island_level_6_0:
     friendly_name: Island lights
     emulated_hue: true
+  light.kitchen_ceiling_level_7_0:
+    friendly_name: Kitchen ceiling
+    emulated_hue: true
+    hidden: False
+  light.dining_level_9_0:
+    friendly_name: Dining room
+    emulated_hue: true
+    hidden: False
+  light.hallway1_level_10_0:
+    friendly_name: Hallway 1
+    emulated_hue: true
+    hidden: False
+  light.hallway2_level_11_0:
+    friendly_name: Hallway 2
+    emulated_hue: true
+    hidden: False
+  switch.kitchen_under_ca_switch_8_0:
+    friendly_name: Under cabinet
+    emulated_hue: true
+    hidden: False
   light.light_1:
     hidden: true
   light.light_2:
     hidden: true
   light.the_lamp:
-    friendly_name: Living room lamp
+    friendly_name: Big lamp
     emulated_hue: true
+    icon: mdi:lamp
   group.living:
     emulated_hue: true
   switch.porch_switch_3_0:
@@ -92,10 +113,8 @@
 
   media_player.office:
     friendly_name: Office Chromecast
-    hidden: true
   media_player.office_tv:
     friendly_name: Office TV
-    hidden: true
   media_player.roku_5s4640042419:
     friendly_name: Playroom TV
-    hidden: true
+    hidden: false

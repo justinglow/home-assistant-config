@@ -1,9 +1,67 @@
-  name: Evening
+- name: Bedtime
+  entities:
+    light.living_ceiling_level_2_0: off
+    light.the_lamp: off
+    switch.wemo_switch: on
+    light.kitchen_ceiling_level_7_0: off
+    light.cafe_level_5_0: off
+    light.island_level_6_0:
+      state: on
+      brightness: 10
+    switch.kitchen_under_ca_switch_8_0: off
+    light.hallway2_level_11_0:
+      state: on
+      brightness: 10
+    light.hallway1_level_10_0:
+      state: on
+      brightness: 10
+    light.dining_level_9_0: off
+
+- name: All_off
+  entities:
+    light.living_ceiling_level_2_0: off
+    light.the_lamp: off
+    switch.wemo_switch: off
+    light.cafe_level_5_0: off
+    light.island_level_6_0: off
+    light.kitchen_ceiling_level_7_0: off
+    switch.kitchen_under_ca_switch_8_0: off
+    light.hallway2_level_11_0: off
+    light.hallway1_level_10_0: off
+    light.dining_level_9_0: off
+
+- name: Morning
+  entities:
+    light.living_ceiling_level_2_0: off
+    light.the_lamp:
+      state: on
+      brightness: 127.5
+    switch.wemo_switch: on
+    light.cafe_level_5_0: on
+    light.island_level_6_0: on
+    light.kitchen_ceiling_level_7_0: off
+    switch.kitchen_under_ca_switch_8_0: off
+    light.hallway2_level_11_0: off
+    light.hallway1_level_10_0: off
+    light.dining_level_9_0: off
+
+- name: Evening
   entities:
     light.living_ceiling_level_2_0:
       state: on
-      brightness: 130
+      brightness: 127.5
+    light.kitchen_ceiling_level_7_0:
+      state: on
+      brightness: 127.5
     light.the_lamp:
       state: on
-      brightness: 130
+      brightness: 127.5
     switch.wemo_switch: on
+    light.cafe_level_5_0: off
+    light.island_level_6_0: on
+    light.hallway2_level_11_0:
+      state: on
+      brightness: 127.5
+    light.hallway1_level_10_0:
+      state: on
+      brightness: 127.5
