@@ -51,6 +51,14 @@
       service: scene.turn_on
       entity_id: scene.bedtime
 
+  - alias: Flash lights when alarm goes off
+    trigger:
+      platform: state
+      entity_id: alarm_control_panel.simplisafe
+      state: 'armed_trigger'
+    action:
+      service: script.light_loop
+
   - alias: All lights off at night
     initial_state: True
     hide_entity: False

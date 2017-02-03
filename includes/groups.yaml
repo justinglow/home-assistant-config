@@ -10,6 +10,7 @@
       - media_player.roku_5s4640042419
       - group.kitchen
       - group.outside_lights
+      - script.light_loop_kill
   living:
     name: Living room
     view: no

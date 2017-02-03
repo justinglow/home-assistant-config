@@ -118,3 +118,5 @@
   media_player.roku_5s4640042419:
     friendly_name: Playroom TV
     hidden: false
+  script.light_loop_kill:
+    hidden: false

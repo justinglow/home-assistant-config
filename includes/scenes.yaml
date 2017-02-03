@@ -11,10 +11,10 @@
     switch.kitchen_under_ca_switch_8_0: off
     light.hallway2_level_11_0:
       state: on
-      brightness: 10
+      brightness: 60
     light.hallway1_level_10_0:
       state: on
-      brightness: 10
+      brightness: 60
     light.dining_level_9_0: off
 
 - name: All_off

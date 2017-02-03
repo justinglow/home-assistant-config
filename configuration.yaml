@@ -85,3 +85,63 @@ sensor:
 automation: !include includes/automations.yaml
 group: !include includes/groups.yaml
 scene: !include includes/scenes.yaml
+
+script:
+  flash_lights:
+    alias: Flash Lights
+    sequence:
+      - service: homeassistant.turn_on
+        data:
+          entity_id:
+            - light.living_ceiling_level_2_0
+            - switch.wemo_switch
+            - light.the_lamp
+            - light.cafe_level_5_0
+            - light.island_level_6_0
+            - light.kitchen_ceiling_level_7_0
+            - light.dining_level_9_0
+            - light.hallway1_level_10_0
+            - light.hallway2_level_11_0
+            - switch.kitchen_under_ca_switch_8_0
+            - switch.porch_switch_3_0
+            - switch.coach_switch_4_0
+      - delay:
+          seconds: 1
+      - service: homeassistant.turn_off
+        data:
+          entity_id:
+            - light.living_ceiling_level_2_0
+            - switch.wemo_switch
+            - light.the_lamp
+            - light.cafe_level_5_0
+            - light.island_level_6_0
+            - light.kitchen_ceiling_level_7_0
+            - light.dining_level_9_0
+            - light.hallway1_level_10_0
+            - light.hallway2_level_11_0
+            - switch.kitchen_under_ca_switch_8_0
+            - switch.porch_switch_3_0
+            - switch.coach_switch_4_0
+      - service: script.turn_on
+        data:
+          entity_id: script.light_loop
+  light_loop:
+    alias: Light flash loop
+    sequence:
+      - delay:
+          seconds: 1
+      - service: script.turn_on
+        data:
+          entity_id: script.flash_lights
+  light_loop_kill:
+    alias: Kill flashing lights
+    sequence:
+      service: script.turn_off
+      data:
+        entity_id: script.light_loop
+
+input_boolean:
+  flash_lights:
+    name: Flash lights
+    initial: off
+    icon: mdi:car
