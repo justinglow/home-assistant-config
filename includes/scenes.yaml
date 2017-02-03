@@ -5,10 +5,8 @@
     switch.wemo_switch: on
     light.kitchen_ceiling_level_7_0: off
     light.cafe_level_5_0: off
-    light.island_level_6_0:
-      state: on
-      brightness: 10
-    switch.kitchen_under_ca_switch_8_0: off
+    light.island_level_6_0: off
+    switch.kitchen_under_ca_switch_8_0: on
     light.hallway2_level_11_0:
       state: on
       brightness: 60

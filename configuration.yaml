@@ -139,9 +139,3 @@ script:
       service: script.turn_off
       data:
         entity_id: script.light_loop
-
-input_boolean:
-  flash_lights:
-    name: Flash lights
-    initial: off
-    icon: mdi:car
