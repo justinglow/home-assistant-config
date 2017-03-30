@@ -33,9 +33,8 @@
   - alias: Lights on an hour before sunset
     initial_state: True
     trigger:
-      platform: sun
-      event: sunset
-      offset: "-01:00:00"
+      platform: time
+      after: '16:30:00'
     action:
       service: scene.turn_on
       entity_id: scene.evening
@@ -68,6 +67,35 @@
     action:
      service: scene.turn_on
      entity_id: scene.all_off
+
+  - alias: Audio notification when Kel gets home
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: state
+      entity_id: device_tracker.kphone_kelley_phone
+      state: 'home'
+    action:
+      service: tts.google_say
+      entity_id: media_player.office
+      data:
+        message: 'Hey Justin! Kelley is now home.'
+
+  - alias: Turn on evening tv scene when apple tv is playing
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: state
+      entity_id: media_player.apple_tv
+      to: 'playing'
+      from: 'paused'
+    condition:
+      condition: time
+      after: '19:00:00'
+    action:
+      service: scene.turn_on
+      entity_id: scene.evening_tv
+
 
 ##################
 # Outside lights #

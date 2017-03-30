@@ -12,6 +12,20 @@ zone:
   latitude: !secret latitude
   longitude: !secret longitude
   icon: mdi:home
+  radius: 300
+
+zone 2:
+  name: Kid's school
+  latitude: !secret school-latitude
+  longitude: !secret school-longitude
+  icon: mdi:school
+  radius: 300
+
+zone 3:
+  name: Kelley's school
+  latitude: !secret kschool-latitude
+  longitude: !secret kschool-longitude
+  icon: mdi:medical-bag
   radius: 500
 
 frontend:
@@ -23,15 +37,33 @@ discovery:
 http:
  api_password: !secret http_password
 
+ifttt:
+  key: !secret ifttt-api
+
 sun:
 
 wemo:
 
+cover:
+  - platform: myq
+    username: justinglow@gmail.com
+    password: !secret myq-password
+    type: chamberlain
+
+tts:
+  platform: google
+
+light:
+  platform: hue
+  host: 192.168.1.108
+
 mqtt:
   broker: m13.cloudmqtt.com
-  port: 10694
-  username: pfvpaiyc
+  port: 13194
+  username: ha
   password: !secret cloudmqtt_password
+  client_id: homeassistant
+  keepalive: 60
 
 zwave:
   usb_path: /dev/ttyACM0
@@ -42,12 +74,12 @@ emulated_hue:
   expose_by_default: false
 
 device_tracker:
-  platform: unifi
-  username: !secret unifi_username
-  password: !secret unifi_password
-  track_new_devices: false
-  consider_home: 30
-  #platform: owntracks
+  # platform: unifi
+  # username: !secret unifi_username
+  # password: !secret unifi_password
+  # track_new_devices: false
+  # consider_home: 30
+  platform: owntracks
 
 alarm_control_panel:
   platform: simplisafe
@@ -55,16 +87,20 @@ alarm_control_panel:
   password: !secret simplisafe_password
 
 media_player:
-  platform: webostv
-  name: Office TV
-  mac: 14:C9:13:2C:F1:E0
-  host: 192.168.1.138
-  customize:
-    sources:
-      - livetv
-      - plex
-      - netflix
-      - hdmi1
+  - platform: webostv
+    name: Office TV
+    mac: 14:C9:13:2C:F1:E0
+    host: 192.168.1.138
+    customize:
+      sources:
+        - livetv
+        - plex
+        - netflix
+        - hdmi1
+  - platform: apple_tv
+    host: 192.168.1.136
+    login_id: 00000000-05a4-3ddf-e243-4e630a6c4355
+
 sensor:
   platform: darksky
   api_key: !secret darksky_api_key

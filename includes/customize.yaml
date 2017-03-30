@@ -8,6 +8,9 @@
   light.cafe_level_5_0:
     friendly_name: Cafe lights
     emulated_hue: true
+    polling_intensity: 1
+    refresh_value: 2
+    delay: 3
   light.island_level_6_0:
     friendly_name: Island lights
     emulated_hue: true
@@ -69,14 +72,16 @@
     hidden: true
   device_tracker.wemo_switch:
     hidden: true
-  device_tracker.justins_phone:
+  device_tracker.phone_justin_phone:
     friendly_name: Justin
     track: true
     hide_if_away: no
-  device_tracker.kelleys_phone:
+    entity_picture: /local/justin.png
+  device_tracker.kphone_kelley_phone:
     friendly_name: Kelley
     track: true
     hide_if_away: no
+    entity_picture: /local/kelley.png
   device_tracker.kelleysair:
     hidden: true
   device_tracker.a002dc80b90e:
@@ -95,6 +100,10 @@
     hidden: true
   device_tracker.iphone:
     hidden: true
+  cover.garage_door_opener:
+    hidden: False
+    friendly_name: Garage door
+    icon: mdi:garage
 
 
   sensor.dark_sky_temperature:

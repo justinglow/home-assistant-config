@@ -11,6 +11,7 @@
       - group.kitchen
       - group.outside_lights
       - script.light_loop_kill
+      - media_player.apple_tv
   living:
     name: Living room
     view: no
@@ -26,6 +27,7 @@
       - light.island_level_6_0
       - light.kitchen_ceiling_level_7_0
       - switch.kitchen_under_ca_switch_8_0
+      - light.dining_level_9_0
   all_lights:
     name: All lights
     view: no
@@ -54,9 +56,10 @@
     name: Family
     view: no
     entities:
-      - device_tracker.kelleys_phone
-      - device_tracker.justins_phone
+      - device_tracker.kphone_kelley_phone
+      - device_tracker.phone_justin_phone
       - alarm_control_panel.simplisafe
+      - cover.garage_door_opener
   media:
     name: Media
     view: no
