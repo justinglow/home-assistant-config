@@ -68,7 +68,7 @@
      service: scene.turn_on
      entity_id: scene.all_off
 
-  - alias: Audio notification when Kel gets home
+  - alias: Push notification when Kel gets home
     initial_state: True
     hide_entity: False
     trigger:
@@ -76,10 +76,22 @@
       entity_id: device_tracker.kphone_kelley_phone
       state: 'home'
     action:
-      service: tts.google_say
-      entity_id: media_player.office
+      service: notify.pushbullet
       data:
-        message: 'Hey Justin! Kelley is now home.'
+        message: 'Kelley is arriving home'
+
+  - alias: Push notification when Kel leaves school
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: state
+      entity_id: device_tracker.kphone_kelley_phone
+      to: 'not_home'
+      from: 'Maryville'
+    action:
+      service: notify.pushbullet
+      data:
+        message: 'Kelley left school'
 
   - alias: Turn on evening tv scene when apple tv is playing
     initial_state: True

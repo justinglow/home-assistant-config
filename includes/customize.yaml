@@ -56,20 +56,6 @@
     hidden: False
 
   #device tracking
-  device_tracker.chromecast:
-    hidden: true
-  device_tracker.echo:
-    hidden: true
-  device_tracker.justinsipad:
-    hidden: true
-  device_tracker.justinsmacbook:
-    hidden: true
-  device_tracker.kindle0ee573d00:
-    hidden: true
-  device_tracker.roku_stick__419:
-    hidden: true
-  device_tracker.rp3:
-    hidden: true
   device_tracker.wemo_switch:
     hidden: true
   device_tracker.phone_justin_phone:
@@ -82,24 +68,6 @@
     track: true
     hide_if_away: no
     entity_picture: /local/kelley.png
-  device_tracker.kelleysair:
-    hidden: true
-  device_tracker.a002dc80b90e:
-    hidden: true
-  device_tracker.a48d3b15718c:
-    hidden: true
-  device_tracker.foxyiphone:
-    hidden: true
-  scene.evening:
-    hidden: true
-  device_tracker.kindle2e920942f:
-    hidden: true
-  device_tracker.kindle2b80e342b:
-    hidden: true
-  device_tracker.kerrysiphone:
-    hidden: true
-  device_tracker.iphone:
-    hidden: true
   cover.garage_door_opener:
     hidden: False
     friendly_name: Garage door

@@ -22,7 +22,7 @@ zone 2:
   radius: 300
 
 zone 3:
-  name: Kelley's school
+  name: Maryville
   latitude: !secret kschool-latitude
   longitude: !secret kschool-longitude
   icon: mdi:medical-bag
@@ -33,6 +33,11 @@ updater:
 history:
 logbook:
 discovery:
+
+notify:
+  - name: pushbullet
+    platform: pushbullet
+    api_key: o.mlOjBV1EWxdMMRhi0StjGIAvEa1xGZjy
 
 http:
  api_password: !secret http_password
