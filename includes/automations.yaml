@@ -79,7 +79,7 @@
     action:
       service: notify.pushbullet
       data:
-        message: 'Kelley is arriving home'
+        message: 'Kelley is arriving home!'
 
   - alias: Push notification when Kel leaves school
     initial_state: True
