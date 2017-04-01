@@ -74,7 +74,8 @@
     trigger:
       platform: state
       entity_id: device_tracker.kphone_kelley_phone
-      state: 'home'
+      to: 'home'
+      from: 'not_home'
     action:
       service: notify.pushbullet
       data:
