@@ -2,7 +2,7 @@
   entities:
     light.living_ceiling_level_2_0: off
     light.the_lamp: off
-    switch.wemo_switch: on
+    switch.wemo_switch: off
     light.kitchen_ceiling_level_7_0: off
     light.cafe_level_5_0: off
     light.island_level_6_0: off
@@ -14,6 +14,9 @@
       state: on
       brightness: 50
     light.dining_level_9_0: off
+    light.hue_bloom_1:
+      state: on
+      rgb_color: [253, 109, 119]
 
 - name: All_off
   entities:
@@ -27,6 +30,7 @@
     light.hallway2_level_11_0: off
     light.hallway1_level_10_0: off
     light.dining_level_9_0: off
+
 
 - name: Evening_TV
   entities:
@@ -46,6 +50,9 @@
       state: on
       brightness: 50
     light.dining_level_9_0: off
+    light.hue_bloom_1:
+      state: on
+      rgb_color: [39, 185, 255]
 
 - name: Morning
   entities:
@@ -61,6 +68,7 @@
     light.hallway2_level_11_0: off
     light.hallway1_level_10_0: off
     light.dining_level_9_0: off
+    light.hue_bloom_1: off
 
 - name: Evening
   entities:

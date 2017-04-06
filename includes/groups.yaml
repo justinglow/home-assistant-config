@@ -11,7 +11,7 @@
       - group.kitchen
       - group.outside_lights
       - script.light_loop_kill
-      - media_player.apple_tv
+      - media_player.apple_tv_2
   living:
     name: Living room
     view: no
@@ -42,6 +42,7 @@
       - light.hallway1_level_10_0
       - light.hallway2_level_11_0
       - switch.kitchen_under_ca_switch_8_0
+      - light.hue_bloom_1
   weather:
     name: Weather
     view: no
