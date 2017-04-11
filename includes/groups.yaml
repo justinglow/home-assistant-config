@@ -7,11 +7,10 @@
       - group.family
       - group.weather
       - group.all_automations
-      - media_player.roku_5s4640042419
       - group.kitchen
       - group.outside_lights
       - script.light_loop_kill
-      - media_player.apple_tv_2
+      - media_player.apple_tv
   living:
     name: Living room
     view: no

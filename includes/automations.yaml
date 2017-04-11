@@ -99,7 +99,7 @@
     hide_entity: False
     trigger:
       platform: state
-      entity_id: media_player.apple_tv_2
+      entity_id: media_player.apple_tv
       to: 'playing'
       from: 'paused'
     condition:

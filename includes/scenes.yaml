@@ -36,9 +36,7 @@
   entities:
     light.living_ceiling_level_2_0: off
     light.kitchen_ceiling_level_7_0: off
-    light.the_lamp:
-      state: on
-      brightness: 127.5
+    light.the_lamp: off
     switch.wemo_switch: off
     switch.kitchen_under_ca_switch_8_0: on
     light.cafe_level_5_0: off
@@ -52,7 +50,7 @@
     light.dining_level_9_0: off
     light.hue_bloom_1:
       state: on
-      rgb_color: [39, 185, 255]
+      rgb_color: [211, 242, 255]
 
 - name: Morning
   entities:
