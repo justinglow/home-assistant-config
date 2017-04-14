@@ -73,13 +73,13 @@
     hide_entity: False
     trigger:
       platform: state
-      entity_id: device_tracker.kphone_kelley_phone
-      to: 'home'
-      from: 'not_home'
+      entity_id: cover.garage_door_opener
+      to: 'open'
+      from: 'closed'
     action:
       service: notify.pushbullet
       data:
-        message: 'Kelley is arriving home'
+        message: 'Garage door just opened'
 
   - alias: Push notification when Kel leaves school
     initial_state: True
