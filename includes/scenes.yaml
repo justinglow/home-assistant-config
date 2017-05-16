@@ -33,6 +33,7 @@
     light.hallway2_level_11_0: off
     light.hallway1_level_10_0: off
     light.dining_level_9_0: off
+    light.blooms: off
 
 
 - name: Evening_TV

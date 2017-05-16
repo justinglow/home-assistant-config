@@ -34,6 +34,7 @@
     friendly_name: Under cabinet
     emulated_hue: true
     hidden: False
+    icon: mdi:lightbulb
   light.light_1:
     hidden: true
   light.light_2:
@@ -72,6 +73,10 @@
     hidden: False
     friendly_name: Garage door
     icon: mdi:garage
+  group.hallway:
+    hidden: False
+    friendly_name: Hallway
+    icon: mdi:lightbulb
 
 
   sensor.dark_sky_temperature:
@@ -93,8 +98,6 @@
   sensor.downstairs_humidity:
     friendly_name: Downstairs humidity
     icon: mdi:water-percent
-  binary_sensor.living_room_occupancy:
-    friendly_name: Occupied?
 
 
   sensor.downstairs_temperature:

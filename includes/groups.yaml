@@ -8,6 +8,8 @@
       - group.house
       - group.outside_lights
       - media_player.apple_tv
+      - group.dining_room
+      - group.upstairs
   house:
     name: House
     view: no
@@ -57,7 +59,6 @@
       - light.hallway1_level_10_0
       - light.hallway2_level_11_0
       - switch.kitchen_under_ca_switch_8_0
-
       - light.playroom
   weather:
     name: Weather
@@ -76,3 +77,20 @@
     entities:
       - switch.porch_switch_3_0
       - switch.coach_switch_4_0
+  dining_room:
+    name: Dining room
+    view: no
+    entities:
+      - light.dining_level_9_0
+      - group.hallway
+  hallway:
+    name: Hallway
+    view: no
+    entities:
+      - light.hallway1_level_10_0
+      - light.hallway2_level_11_0
+  Upstairs:
+    name: Upstairs
+    view: no
+    entities:
+      - light.playroom

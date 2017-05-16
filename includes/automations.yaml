@@ -150,10 +150,10 @@
 
 
 ##################
-# Outside lights #
+# Sun automations #
 ##################
 
-  - alias: Outside lights off at sunrise
+  - alias: Lights off at sunrise
     initial_state: True
     hide_entity: False
     trigger:
