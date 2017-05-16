@@ -1,6 +1,6 @@
 # Home Assistant Config
 
-Hey! This is my Home Assistant configuration. Under the screenshot of my Home Assistant front-end, you'll find the devices I'm using, the automations I have running, as well as some video examples. You can also browse through my configuration files above to see how I'm doing everything.
+Hey! This is my Home Assistant configuration. Under the screenshot of the front-end below you'll find the devices I'm using, the automations I have running, as well as some video examples. You can also browse through my configuration files above to see how I'm doing everything.
 
 I am very regularly adding new devices, automations, and configurations. I'll keep this readme updated with the latest.
 
@@ -12,10 +12,10 @@ Here's the stuff I use to control my home. It's a mixture of Z Wave and Wifi dev
 
 ## Controller
 * Raspberry Pi 3 running Home Assistant
-* Aeotec ZW090 Z Stick
+* Aeotec ZW090 Z Stick (to interface with Z Wave network)
 
 ## Switches and lights
-* GE Z-Wave Smart Dimmer Toggle Switch 12729 (x6)
+* GE Z-Wave Smart Dimmer Toggle Switch 12729 (x7)
 * GE Z-Wave Smart Toggle Switch, On/Off 12727 (x3)
 * Phillips Hue Bloom (x2)
 * Phillips Hue White A19 (x2) with bridge
@@ -43,7 +43,7 @@ Here's the stuff I use to control my home. It's a mixture of Z Wave and Wifi dev
   - If cloud cover is over 75%, turn them on 2.5 hours before sunset (because it's darker)
   - If cloud cover is under 75%, turn them on only 30 minutes before sunset (because it's brighter)
 * Turn on morning light scene at sunrise
-* Turn all lights on when wife and kids leave for school
+* Turn all lights off when wife and kids leave for school
 * Turn on evening light scene at 4:30 PM every day
 * Turn off all lights at midnight
 * Turn on and off lights (independently or as a group) using Alexa [[video example]](https://youtu.be/am7hBSraAyA)
@@ -56,5 +56,11 @@ Here's the stuff I use to control my home. It's a mixture of Z Wave and Wifi dev
 
 ## Media
 
-* When Apple TV is playing, trigger media light scene
-* When Apple TV is paused, trigger media-paused light scene
+* When Apple TV is playing, trigger media-playing light scene; When Apple TV is paused, trigger media-paused light scene
+
+# Coming soon
+
+* Ecobee4 + sensors for upstairs
+* Z Wave dimmer for back porch lights plus motion sensor for security
+* Z Wave switch for fireplace
+* Randomize Hue Bloom colors each time a scene triggers them from off to on
