@@ -1,4 +1,7 @@
 # Home Assistant Config
+
+![Home Assistant front-end](http://i.imgur.com/buFzIfi.png)
+
 Hey! This is my Home Assistant configuration. Here's what my setup entails so far:
 
 # Devices
