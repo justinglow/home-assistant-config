@@ -49,7 +49,7 @@ Here's the stuff I use.
 * If alarm siren is activated, flash all controlled lights in house once per second until disarmed
 * Send mobile alert when garage door opens
 
-# Media
+## Media
 
 * When Apple TV is playing, trigger media light scene
 * When Apple TV is paused, trigger media-paused light scene
