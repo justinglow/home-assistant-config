@@ -1,12 +1,14 @@
 # Home Assistant Config
 
-Hey! This is my Home Assistant configuration. Under the screenshot of my Home Assistant front-end, you'll find the devices I'm using, the automations I have running, as well as some video examples.
+Hey! This is my Home Assistant configuration. Under the screenshot of my Home Assistant front-end, you'll find the devices I'm using, the automations I have running, as well as some video examples. You can also browse through my configuration files above to see how I'm doing everything.
+
+I am very regularly adding new devices, automations, and configurations. I'll keep this readme updated with the latest.
 
 ![Home Assistant front-end](http://i.imgur.com/buFzIfi.png)
 
 # Devices
 
-Here's the stuff I use to control my home. It's a mixture of Z Wave and Wifi devices, all controlled by Home Assistant and the Amazon Echo for voice.
+Here's the stuff I use to control my home. It's a mixture of Z Wave and Wifi devices, all controlled by Home Assistant and the Amazon Echo for voice, plus some other misc things thrown in the mix. What's great about Home Assistant is you can mix and match devices and it treats them all the same. This keeps me from being locked to any one smart home vendor. Great job!
 
 ## Controller
 * Raspberry Pi 3 running Home Assistant
