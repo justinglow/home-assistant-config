@@ -6,7 +6,7 @@ Hey! This is my Home Assistant configuration. Under the screenshot of my Home As
 
 # Devices
 
-Here's the stuff I use.
+Here's the stuff I use to control my home. It's a mixture of Z Wave and Wifi devices, all controlled by Home Assistant and the Amazon Echo for voice.
 
 ## Controller
 * Raspberry Pi 3 running Home Assistant
@@ -40,7 +40,7 @@ Here's the stuff I use.
 * Turn on outside lights at sunset
   - If cloud cover is over 75%, turn them on 2.5 hours before sunset (because it's darker)
   - If cloud cover is under 75%, turn them on only 30 minutes before sunset (because it's brighter)
-  - Turn on morning light scene at sunrise
+* Turn on morning light scene at sunrise
 * Turn all lights on when wife and kids leave for school
 * Turn on evening light scene at 4:30 PM every day
 * Turn off all lights at midnight
