@@ -1,6 +1,6 @@
 # Home Assistant Config
 
-Hey! This is my Home Assistant configuration. Here's what my setup entails so far:
+Hey! This is my Home Assistant configuration. Under the screenshot of my Home Assistant front-end, you'll find the devices I'm using, the automations I have running, as well as some video examples.
 
 ![Home Assistant front-end](http://i.imgur.com/buFzIfi.png)
 
@@ -20,16 +20,18 @@ Here's the stuff I use.
 * WeMo Switch Smart Plug, Wi-Fi
 * YEELIGHT Smart LED Bulb, Wi-Fi,60W Equivalent E26
 
-## Misc
-* Ecobee3 smart thermostat + sensors
-* Simplisafe wireless home security system
-* LiftMaster CIGBU Internet Gateway for MyQ garage door
+## Voice control
 * Amazon Echo
 * Amazon Echo dot
 
 ## Presence detection
 * Google Nexus 5X (2)
 * Owntracks via MQTT (CloudMQTT)
+
+## Misc
+* Ecobee3 smart thermostat + sensors
+* Simplisafe wireless home security system
+* LiftMaster CIGBU Internet Gateway for MyQ garage door
 
 # Automations
 
