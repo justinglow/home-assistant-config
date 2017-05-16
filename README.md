@@ -49,7 +49,7 @@ Here's the stuff I use.
 ## Security
 * Disarm the alarm every morning at 6:45 AM, turn on morning light scene
 * When alarm is manually armed at night, turn on nighttime light scene
-* If alarm siren is activated, flash all controlled lights in house once per second until disarmed
+* If alarm siren is activated, flash all controlled lights in house once per second until disarmed [[video example]](https://youtu.be/K4GNwNoDph4)
 * Send mobile alert when garage door opens
 
 ## Media
