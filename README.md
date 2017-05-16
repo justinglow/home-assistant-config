@@ -44,7 +44,7 @@ Here's the stuff I use.
 * Turn all lights on when wife and kids leave for school
 * Turn on evening light scene at 4:30 PM every day
 * Turn off all lights at midnight
-* Turn on and off lights (independently or as a group) using Alexa [Video example](https://www.youtube.com/edit?o=U&video_id=am7hBSraAyA)
+* Turn on and off lights (independently or as a group) using Alexa [[video example]](https://www.youtube.com/edit?o=U&video_id=am7hBSraAyA)
 
 ## Security
 * Disarm the alarm every morning at 6:45 AM, turn on morning light scene
