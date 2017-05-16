@@ -2,15 +2,28 @@
     view: yes
     entities:
       - group.living
-      - group.all_lights
-     #- camera.playroom
       - group.family
       - group.weather
-      - group.all_automations
       - group.kitchen
+      - group.house
       - group.outside_lights
-      - script.light_loop_kill
       - media_player.apple_tv
+  house:
+    name: House
+    view: no
+    entities:
+      - device_tracker.kphone_kelley_phone
+      - device_tracker.phone_justin_phone
+      - cover.garage_door_opener
+      - sensor.downstairs_temperature
+      - sensor.downstairs_humidity
+      - alarm_control_panel.simplisafe
+  automations:
+    name: automations
+    view: yes
+    entities:
+      - group.all_automations
+      - script.light_loop_kill
   living:
     name: Living room
     view: no
@@ -18,6 +31,9 @@
       - light.living_ceiling_level_2_0
       - light.the_lamp
       - switch.wemo_switch
+      - light.hue_bloom_1
+      - light.hue_bloom_2
+      - sensor.living_room_temperature
   kitchen:
     name: Kitchen
     view: no
@@ -41,7 +57,8 @@
       - light.hallway1_level_10_0
       - light.hallway2_level_11_0
       - switch.kitchen_under_ca_switch_8_0
-      - light.hue_bloom_1
+
+      - light.playroom
   weather:
     name: Weather
     view: no
@@ -51,22 +68,8 @@
       - sensor.dark_sky_daily_high_temperature
       - sensor.dark_sky_humidity
       - sensor.dark_sky_precip_probability
+      - sensor.dark_sky_cloud_coverage
       - sun.sun
-  family:
-    name: Family
-    view: no
-    entities:
-      - device_tracker.kphone_kelley_phone
-      - device_tracker.phone_justin_phone
-      - alarm_control_panel.simplisafe
-      - cover.garage_door_opener
-  media:
-    name: Media
-    view: no
-    entities:
-      - media_player.office
-      - media_player.office_tv
-      - media_player.roku_5s4640042419
   outside_lights:
     name: Outside
     view: no

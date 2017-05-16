@@ -14,9 +14,12 @@
       state: on
       brightness: 50
     light.dining_level_9_0: off
-    light.hue_bloom_1:
+    light.blooms:
       state: on
       rgb_color: [253, 109, 119]
+    light.playroom:
+      state: on
+      brightness: 50
 
 - name: All_off
   entities:
@@ -26,7 +29,7 @@
     light.cafe_level_5_0: off
     light.island_level_6_0: off
     light.kitchen_ceiling_level_7_0: off
-    switch.kitchen_under_ca_switch_8_0: off
+    switch.kitchen_under_ca_switch_8_0: on
     light.hallway2_level_11_0: off
     light.hallway1_level_10_0: off
     light.dining_level_9_0: off
@@ -48,9 +51,18 @@
       state: on
       brightness: 50
     light.dining_level_9_0: off
-    light.hue_bloom_1:
+    light.blooms:
       state: on
       rgb_color: [211, 242, 255]
+
+- name: Evening_TV_paused
+  entities:
+    light.living_ceiling_level_2_0:
+      state: on
+      brightness: 127.5
+    light.kitchen_ceiling_level_7_0:
+      state: on
+      brightness: 127.5
 
 - name: Morning
   entities:
@@ -66,7 +78,8 @@
     light.hallway2_level_11_0: off
     light.hallway1_level_10_0: off
     light.dining_level_9_0: off
-    light.hue_bloom_1: off
+    light.blooms: off
+    light.playroom: off
 
 - name: Evening
   entities:
@@ -87,3 +100,4 @@
     light.hallway1_level_10_0:
       state: on
       brightness: 127.5
+    light.blooms: off

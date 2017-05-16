@@ -30,7 +30,7 @@
       service: scene.turn_on
       entity_id: scene.all_off
 
-  - alias: Lights on an hour before sunset
+  - alias: Lights on at 4:30
     initial_state: True
     trigger:
       platform: time
@@ -94,6 +94,18 @@
       data:
         message: 'Kelley left school'
 
+  - alias: Push notification if ATV is down
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: state
+      entity_id: media_player.apple_tv
+      state: 'unknown'
+    action:
+      service: notify.pushbullet
+      data:
+        message: 'Apple TV connection failed'
+
   - alias: Turn on evening tv scene when apple tv is playing
     initial_state: True
     hide_entity: False
@@ -105,9 +117,36 @@
     condition:
       condition: time
       after: '19:00:00'
+      weekday:
+        - sun
+        - mon
+        - tue
+        - wed
+        - thu
     action:
       service: scene.turn_on
       entity_id: scene.evening_tv
+
+  - alias: When ATV is playing then paused turm on evening scene
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: state
+      entity_id: media_player.apple_tv
+      to: 'paused'
+      from: 'playing'
+    condition:
+      condition: time
+      after: '19:00:00'
+      weekday:
+        - sun
+        - mon
+        - tue
+        - wed
+        - thu
+    action:
+      service: scene.turn_on
+      entity_id: scene.evening_tv_paused
 
 
 ##################
@@ -121,23 +160,54 @@
       platform: sun
       event: sunrise
     action:
-      service: switch.turn_off
-      entity_id:
-        - switch.porch_switch_3_0
-        - switch.coach_switch_4_0
+      - service: switch.turn_off
+        entity_id:
+          - switch.porch_switch_3_0
+          - switch.coach_switch_4_0
+      - service: light.turn_off
+        entity_id:
+          - light.playroom
 
-  - alias: Outside lights on at sunset
+  - alias: Lights on at sunset, low cloud cover
     initial_state: True
     hide_entity: False
     trigger:
       platform: sun
       event: sunset
-      offset: "-00:20:00"
+      offset: "-00:30:00"
+    condition:
+      condition: numeric_state
+      entity_id: sensor.dark_sky_cloud_coverage
+      below: '75'
     action:
-      service: switch.turn_on
-      entity_id:
-        - switch.porch_switch_3_0
-        - switch.coach_switch_4_0
+      - service: switch.turn_on
+        entity_id:
+          - switch.porch_switch_3_0
+          - switch.coach_switch_4_0
+      - service: light.turn_on
+        entity_id:
+          - light.playroom
+
+  - alias: Lights on at sunset, high cloud cover
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: sun
+      event: sunset
+      offset: "-02:30:00"
+    condition:
+      condition: numeric_state
+      entity_id: sensor.dark_sky_cloud_coverage
+      above: '75'
+    action:
+      - service: switch.turn_on
+        entity_id:
+          - switch.porch_switch_3_0
+          - switch.coach_switch_4_0
+      - service: light.turn_on
+        entity_id:
+          - light.playroom
+
 
 ################################################
 ## alarm

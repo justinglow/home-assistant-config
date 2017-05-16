@@ -87,13 +87,25 @@
   sensor.dark_sky_precip_probability:
     friendly_name: Chance of rain
     icon: mdi:weather-rainy
+  sensor.dark_sky_cloud_coverage:
+    friendly_name: Cloud coverage
+
+  sensor.downstairs_humidity:
+    friendly_name: Downstairs humidity
+    icon: mdi:water-percent
+  binary_sensor.living_room_occupancy:
+    friendly_name: Occupied?
+
+
+  sensor.downstairs_temperature:
+    friendly_name: Downstairs temp
+
+  sensor.living_room_temperature:
+    friendly_name: Living room temp
 
   media_player.office:
     friendly_name: Office Chromecast
   media_player.office_tv:
     friendly_name: Office TV
-  media_player.roku_5s4640042419:
-    friendly_name: Playroom TV
-    hidden: false
   script.light_loop_kill:
     hidden: false

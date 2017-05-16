@@ -33,6 +33,7 @@ updater:
 history:
 logbook:
 discovery:
+config:
 
 notify:
   - name: pushbullet
@@ -44,6 +45,9 @@ http:
 
 ifttt:
   key: !secret ifttt-api
+
+ecobee:
+  api_key: !secret ecobee-key
 
 sun:
 
@@ -59,8 +63,13 @@ tts:
   platform: google
 
 light:
-  platform: hue
-  host: 192.168.1.108
+  - platform: hue
+    host: 192.168.1.108
+  - platform: yeelight
+    devices:
+      192.168.1.137:
+        name: Playroom
+        transition: 1000
 
 mqtt:
   broker: m13.cloudmqtt.com
@@ -92,16 +101,16 @@ alarm_control_panel:
   password: !secret simplisafe_password
 
 media_player:
-  - platform: webostv
-    name: Office TV
-    mac: 14:C9:13:2C:F1:E0
-    host: 192.168.1.138
-    customize:
-      sources:
-        - livetv
-        - plex
-        - netflix
-        - hdmi1
+#  - platform: webostv
+#    name: Office TV
+#    mac: 14:C9:13:2C:F1:E0
+#    host: 192.168.1.138
+#    customize:
+#      sources:
+#        - livetv
+#        - plex
+#        - netflix
+#        - hdmi1
   - platform: apple_tv
     host: 192.168.1.136
     login_id: 00000000-05a4-3ddf-e243-4e630a6c4355
@@ -115,6 +124,7 @@ sensor:
     - temperature_min
     - humidity
     - precip_probability
+    - cloud_cover
 
 #camera:
 #  platform: generic
