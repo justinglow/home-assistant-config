@@ -17,6 +17,7 @@
       - device_tracker.kphone_kelley_phone
       - device_tracker.phone_justin_phone
       - cover.garage_door_opener
+      - sensor.upstairs_temperature
       - sensor.downstairs_temperature
       - sensor.downstairs_humidity
       - alarm_control_panel.simplisafe
@@ -33,18 +34,16 @@
       - light.living_ceiling_level_2_0
       - light.the_lamp
       - switch.wemo_switch
-      - light.hue_bloom_1
-      - light.hue_bloom_2
+      - light.blooms
       - sensor.living_room_temperature
   kitchen:
     name: Kitchen
     view: no
     entities:
       - light.cafe_level_5_0
-      - light.island_level_6_0
+      - light.island_lights_level_6_0
       - light.kitchen_ceiling_level_7_0
       - switch.kitchen_under_ca_switch_8_0
-      - light.dining_level_9_0
   all_lights:
     name: All lights
     view: no
@@ -53,7 +52,6 @@
       - switch.wemo_switch
       - light.the_lamp
       - light.cafe_level_5_0
-      - light.island_level_6_0
       - light.kitchen_ceiling_level_7_0
       - light.dining_level_9_0
       - light.hallway1_level_10_0
@@ -89,8 +87,17 @@
     entities:
       - light.hallway1_level_10_0
       - light.hallway2_level_11_0
+  blooms:
+    name: The Blooms
+    view: no
+    entities:
+      - light.hue_bloom_1
+      - light.hue_bloom_2
   Upstairs:
     name: Upstairs
     view: no
     entities:
       - light.playroom
+      - sensor.master_humidity
+      - sensor.upstairs_temperature
+      - sensor.master_temperature

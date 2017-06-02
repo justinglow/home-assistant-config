@@ -1,3 +1,4 @@
+#living room
   switch.wemo_switch:
     friendly_name: Small lamp
     icon: mdi:lamp
@@ -5,36 +6,6 @@
   light.living_ceiling_level_2_0:
     friendly_name: Living room ceiling
     emulated_hue: true
-  light.cafe_level_5_0:
-    friendly_name: Cafe lights
-    emulated_hue: true
-    polling_intensity: 1
-    refresh_value: 2
-    delay: 3
-  light.island_level_6_0:
-    friendly_name: Island lights
-    emulated_hue: true
-  light.kitchen_ceiling_level_7_0:
-    friendly_name: Kitchen ceiling
-    emulated_hue: true
-    hidden: False
-  light.dining_level_9_0:
-    friendly_name: Dining room
-    emulated_hue: true
-    hidden: False
-  light.hallway1_level_10_0:
-    friendly_name: Hallway 1
-    emulated_hue: true
-    hidden: False
-  light.hallway2_level_11_0:
-    friendly_name: Hallway 2
-    emulated_hue: true
-    hidden: False
-  switch.kitchen_under_ca_switch_8_0:
-    friendly_name: Under cabinet
-    emulated_hue: true
-    hidden: False
-    icon: mdi:lightbulb
   light.light_1:
     hidden: true
   light.light_2:
@@ -45,16 +16,63 @@
     icon: mdi:lamp
   group.living:
     emulated_hue: true
+
+#kitchen
+  light.cafe_level_5_0:
+    friendly_name: Cafe lights
+    emulated_hue: true
+    polling_intensity: 1
+    refresh_value: 2
+    delay: 3
+  light.island_lights_level_6_0:
+    friendly_name: Island lights
+    emulated_hue: true
+  light.kitchen_ceiling_level_7_0:
+    friendly_name: Kitchen ceiling
+    emulated_hue: true
+    hidden: False
+  switch.kitchen_under_ca_switch_8_0:
+    friendly_name: Under cabinet
+    emulated_hue: true
+    hidden: False
+    icon: mdi:lightbulb
+  group.kitchen:
+    emulated_hue: true
+
+#dining room
+  light.dining_level_9_0:
+    friendly_name: Dining room
+    emulated_hue: true
+    hidden: False
+  light.hallway1_level_10_0:
+    friendly_name: Hallway 1
+  light.hallway2_level_11_0:
+    friendly_name: Hallway 2
+  group.hallway:
+    hidden: False
+    friendly_name: Hallway
+    icon: mdi:lightbulb
+    emulated_hue: true
+
+
+#outside
   switch.porch_switch_3_0:
     friendly_name: Porch light
-    emulated_hue: true
     icon: mdi:home-variant
   switch.coach_switch_4_0:
     friendly_name: Coach lights
-    emulated_hue: true
     icon: mdi:home-variant
-  group.all_automations:
+  cover.garage_door_opener:
     hidden: False
+    friendly_name: Garage door
+    icon: mdi:garage
+
+#upstairs
+  light.playroom:
+    friendly_name: Playroom
+    emulated_hue: true
+    icon: mdi:lamp
+
 
   #device tracking
   device_tracker.wemo_switch:
@@ -69,16 +87,32 @@
     track: true
     hide_if_away: no
     entity_picture: /local/kelley.png
-  cover.garage_door_opener:
-    hidden: False
-    friendly_name: Garage door
-    icon: mdi:garage
-  group.hallway:
-    hidden: False
-    friendly_name: Hallway
-    icon: mdi:lightbulb
 
 
+#group configs
+
+  group.all_automations:
+    hidden: False
+
+
+#sensors
+  #ecobee
+  sensor.downstairs_temperature:
+    friendly_name: Downstairs temp
+  sensor.upstairs_temperature:
+    friendly_name: Upstairs temp
+  sensor.master_temperature:
+    friendly_name: Master temp
+  sensor.living_room_temperature:
+    friendly_name: Living room temp
+  sensor.downstairs_humidity:
+    friendly_name: Downstairs humidity
+    icon: mdi:water-percent
+  sensor.master_humidity:
+    friendly_name: Upstairs humidity
+    icon: mdi:water-percent
+
+  #darksky
   sensor.dark_sky_temperature:
     friendly_name: Outside temp
   sensor.dark_sky_daily_low_temperature:
@@ -95,20 +129,14 @@
   sensor.dark_sky_cloud_coverage:
     friendly_name: Cloud coverage
 
-  sensor.downstairs_humidity:
-    friendly_name: Downstairs humidity
-    icon: mdi:water-percent
 
 
-  sensor.downstairs_temperature:
-    friendly_name: Downstairs temp
-
-  sensor.living_room_temperature:
-    friendly_name: Living room temp
-
+#media
   media_player.office:
     friendly_name: Office Chromecast
   media_player.office_tv:
     friendly_name: Office TV
+
+#security
   script.light_loop_kill:
     hidden: false

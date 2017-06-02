@@ -34,42 +34,22 @@ history:
 logbook:
 discovery:
 config:
+http:
+ api_password: !secret http_password
+sun:
+
+# 3rd party integrations
 
 notify:
   - name: pushbullet
     platform: pushbullet
     api_key: o.mlOjBV1EWxdMMRhi0StjGIAvEa1xGZjy
 
-http:
- api_password: !secret http_password
-
 ifttt:
   key: !secret ifttt-api
 
-ecobee:
-  api_key: !secret ecobee-key
-
-sun:
-
-wemo:
-
-cover:
-  - platform: myq
-    username: justinglow@gmail.com
-    password: !secret myq-password
-    type: chamberlain
-
 tts:
   platform: google
-
-light:
-  - platform: hue
-    host: 192.168.1.108
-  - platform: yeelight
-    devices:
-      192.168.1.137:
-        name: Playroom
-        transition: 1000
 
 mqtt:
   broker: m13.cloudmqtt.com
@@ -78,42 +58,6 @@ mqtt:
   password: !secret cloudmqtt_password
   client_id: homeassistant
   keepalive: 60
-
-zwave:
-  usb_path: /dev/ttyACM0
-
-emulated_hue:
-  type: alexa
-  host_ip: 192.168.1.147
-  expose_by_default: false
-
-device_tracker:
-  # platform: unifi
-  # username: !secret unifi_username
-  # password: !secret unifi_password
-  # track_new_devices: false
-  # consider_home: 30
-  platform: owntracks
-
-alarm_control_panel:
-  platform: simplisafe
-  username: !secret simplisafe_username
-  password: !secret simplisafe_password
-
-media_player:
-#  - platform: webostv
-#    name: Office TV
-#    mac: 14:C9:13:2C:F1:E0
-#    host: 192.168.1.138
-#    customize:
-#      sources:
-#        - livetv
-#        - plex
-#        - netflix
-#        - hdmi1
-  - platform: apple_tv
-    host: 192.168.1.136
-    login_id: 00000000-05a4-3ddf-e243-4e630a6c4355
 
 sensor:
   platform: darksky
@@ -126,16 +70,60 @@ sensor:
     - precip_probability
     - cloud_cover
 
-#camera:
-#  platform: generic
-#  still_image_url: http://192.168.1.151:7777/cgi-bin/snapshot.cgi?1
-#  username: admin
-#  password: !secret playroom_camera_password
-#  name: Playroom
+
+# hardware
+
+ecobee:
+  api_key: !secret ecobee-key
+
+cover:
+  - platform: myq
+    username: justinglow@gmail.com
+    password: !secret myq-password
+    type: chamberlain
+
+wemo:
+
+light:
+  - platform: hue
+    host: 192.168.1.108
+  - platform: yeelight
+    devices:
+      192.168.1.137:
+        name: Playroom
+        transition: 1000
+
+zwave:
+  usb_path: /dev/ttyACM0
+
+emulated_hue:
+  type: alexa
+  host_ip: 192.168.1.147
+  expose_by_default: false
+
+device_tracker:
+  platform: owntracks
+
+alarm_control_panel:
+  platform: simplisafe
+  username: !secret simplisafe_username
+  password: !secret simplisafe_password
+
+media_player:
+  - platform: apple_tv
+    host: 192.168.1.136
+    login_id: 00000000-05a4-3ddf-e243-4e630a6c4355
+
+
+
+
+#includes
 
 automation: !include includes/automations.yaml
 group: !include includes/groups.yaml
 scene: !include includes/scenes.yaml
+
+#scripts -- move this to a file later
 
 script:
   flash_lights:
@@ -148,7 +136,7 @@ script:
             - switch.wemo_switch
             - light.the_lamp
             - light.cafe_level_5_0
-            - light.island_level_6_0
+            - light.island_level_11_0
             - light.kitchen_ceiling_level_7_0
             - light.dining_level_9_0
             - light.hallway1_level_10_0
@@ -165,7 +153,7 @@ script:
             - switch.wemo_switch
             - light.the_lamp
             - light.cafe_level_5_0
-            - light.island_level_6_0
+            - light.island_level_11_0
             - light.kitchen_ceiling_level_7_0
             - light.dining_level_9_0
             - light.hallway1_level_10_0

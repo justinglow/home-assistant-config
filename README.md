@@ -56,7 +56,7 @@ Here's the stuff I use to control my home. It's a mixture of Z Wave and Wifi dev
 
 ## Media
 
-* When Apple TV is playing (after 7pm), trigger media-playing light scene; when Apple TV is paused, trigger media-paused light scene [[video example]](https://youtu.be/wfzKJfB-_QY)
+* When Apple TV is playing (after 7pm), trigger media-playing light scene; when Apple TV is paused, trigger media-paused light scene [[video example]](https://youtu.be/wfzKJfB-_QY)t
 
 # Coming soon
 
