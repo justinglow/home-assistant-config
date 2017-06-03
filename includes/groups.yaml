@@ -16,6 +16,7 @@
     entities:
       - device_tracker.kphone_kelley_phone
       - device_tracker.phone_justin_phone
+      - sensor.garage_door_status
       - cover.garage_door_opener
       - sensor.upstairs_temperature
       - sensor.downstairs_temperature
@@ -58,6 +59,7 @@
       - light.hallway2_level_11_0
       - switch.kitchen_under_ca_switch_8_0
       - light.playroom
+      - light.island_lights_level_6_0
   weather:
     name: Weather
     view: no

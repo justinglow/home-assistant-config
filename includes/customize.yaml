@@ -64,7 +64,7 @@
     icon: mdi:home-variant
   cover.garage_door_opener:
     hidden: False
-    friendly_name: Garage door
+    friendly_name: Garage door control
     icon: mdi:garage
 
 #upstairs
@@ -129,6 +129,9 @@
   sensor.dark_sky_cloud_coverage:
     friendly_name: Cloud coverage
 
+  #etc
+  sensor.garage_door_status:
+    icon: mdi:garage
 
 
 #media

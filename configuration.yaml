@@ -60,15 +60,20 @@ mqtt:
   keepalive: 60
 
 sensor:
-  platform: darksky
-  api_key: !secret darksky_api_key
-  monitored_conditions:
-    - temperature
-    - temperature_max
-    - temperature_min
-    - humidity
-    - precip_probability
-    - cloud_cover
+  - platform: darksky
+    api_key: !secret darksky_api_key
+    monitored_conditions:
+      - temperature
+      - temperature_max
+      - temperature_min
+      - humidity
+      - precip_probability
+      - cloud_cover
+  - platform: template
+    sensors:
+      garage_door_status:
+        friendly_name: 'Garage door'
+        value_template: '{{ states.cover.garage_door_opener.state }}'
 
 
 # hardware

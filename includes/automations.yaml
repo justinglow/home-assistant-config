@@ -68,7 +68,7 @@
      service: scene.turn_on
      entity_id: scene.all_off
 
-  - alias: Push notification when Kel gets home
+  - alias: Push notification when garage door opens
     initial_state: True
     hide_entity: False
     trigger:
