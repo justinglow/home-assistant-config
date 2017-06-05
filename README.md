@@ -53,15 +53,16 @@ Here's the stuff I use to control my home. It's a mixture of Z Wave and Wifi dev
 * When alarm is manually armed at night, turn on nighttime light scene [[video example]](https://youtu.be/EiiTg5AtEew)
 * If alarm siren is activated, flash all controlled lights in house once per second until disarmed [[video example]](https://youtu.be/K4GNwNoDph4)
 * Send mobile alert when garage door opens
+* Turn lights on inside when motion is detected outside (and alarm is set with sun down)
 
 ## Media
 
-* When Apple TV is playing (after 7pm), trigger media-playing light scene; when Apple TV is paused, trigger media-paused light scene [[video example]](https://youtu.be/wfzKJfB-_QY)t
+* When Apple TV is playing (after 7pm), trigger media-playing light scene; when Apple TV is paused, trigger media-paused light scene [[video example]](https://youtu.be/wfzKJfB-_QY)
 
 # Coming soon
 
 * ~~Ecobee4 + sensors for upstairs~~
-* Z Wave dimmer for back porch lights plus motion sensor for security
+* ~~Z Wave dimmer for back porch lights plus motion sensor for security~~
 * Z Wave switch for fireplace
 * Randomize Hue Bloom colors each time a scene triggers them from off to on
 * More accurate and frequent presence detection

@@ -77,6 +77,7 @@
     entities:
       - switch.porch_switch_3_0
       - switch.coach_switch_4_0
+      - binary_sensor.ecolink_unknown_type0004_id0001_sensor_12_0
   dining_room:
     name: Dining room
     view: no

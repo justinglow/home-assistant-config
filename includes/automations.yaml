@@ -222,3 +222,45 @@
     action:
       entity_id: alarm_control_panel.simplisafe
       service: alarm_control_panel.alarm_disarm
+
+  - alias: Push notification when motion triggered
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: state
+      entity_id: binary_sensor.ecolink_unknown_type0004_id0001_sensor_12_0
+      to: 'on'
+      from: 'off'
+    action:
+      service: notify.pushbullet
+      data:
+        message: 'Motion on back porch detected'
+
+  - alias: Turn on inside lights when motion outside is detected
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: state
+      entity_id: binary_sensor.ecolink_unknown_type0004_id0001_sensor_12_0
+      to: 'on'
+      from: 'off'
+    action:
+      service: light.turn_on
+      entity_id:
+        - light.living_ceiling_level_2_0
+        - light.kitchen_ceiling_level_7_0
+      data:
+        brightness: 255
+
+  - alias: Turn inside lights off after 1 minute of inactivity
+    trigger:
+      platform: state
+      entity_id: binary_sensor.ecolink_unknown_type0004_id0001_sensor_12_0
+      to: 'off'
+      for:
+        minutes: 1
+    action:
+      service: light.turn_off
+      entity_id:
+        - light.living_ceiling_level_2_0
+        - light.kitchen_ceiling_level_7_0
