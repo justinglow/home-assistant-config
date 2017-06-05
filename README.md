@@ -53,7 +53,7 @@ Here's the stuff I use to control my home. It's a mixture of Z Wave and Wifi dev
 * When alarm is manually armed at night, turn on nighttime light scene [[video example]](https://youtu.be/EiiTg5AtEew)
 * If alarm siren is activated, flash all controlled lights in house once per second until disarmed [[video example]](https://youtu.be/K4GNwNoDph4)
 * Send mobile alert when garage door opens
-* Turn lights on inside when motion is detected outside (and alarm is set with sun down)
+* Turn lights on inside to mimic activity when motion is detected outside (and alarm is set with sun down)
 
 ## Media
 

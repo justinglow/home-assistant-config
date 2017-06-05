@@ -210,7 +210,7 @@
 
 
 ################################################
-## alarm
+## security
 ################################################
 
   - alias: Turn alarm off in the morning
@@ -231,6 +231,20 @@
       entity_id: binary_sensor.ecolink_unknown_type0004_id0001_sensor_12_0
       to: 'on'
       from: 'off'
+    condition:
+        condition: and
+        conditions:
+          - condition: state
+            entity_id: sun.sun
+            state: below_horizon
+          - condition: or
+            conditons:
+              - condition: state
+                entity_id: alarm_control_panel.simplisafe
+                state: 'armed_home'
+              - condition: state
+                entity_id: alarm_control_panel.simplisafe
+                state: 'armed_away'
     action:
       service: notify.pushbullet
       data:
@@ -244,6 +258,20 @@
       entity_id: binary_sensor.ecolink_unknown_type0004_id0001_sensor_12_0
       to: 'on'
       from: 'off'
+    condition:
+        condition: and
+        conditions:
+          - condition: state
+            entity_id: sun.sun
+            state: below_horizon
+          - condition: or
+            conditons:
+              - condition: state
+                entity_id: alarm_control_panel.simplisafe
+                state: 'armed_home'
+              - condition: state
+                entity_id: alarm_control_panel.simplisafe
+                state: 'armed_away'
     action:
       service: light.turn_on
       entity_id:
@@ -259,8 +287,22 @@
       to: 'off'
       for:
         minutes: 1
+    condition:
+        condition: and
+        conditions:
+          - condition: state
+            entity_id: sun.sun
+            state: below_horizon
+          - condition: or
+            conditons:
+              - condition: state
+                entity_id: alarm_control_panel.simplisafe
+                state: 'armed_home'
+              - condition: state
+                entity_id: alarm_control_panel.simplisafe
+                state: 'armed_away'
     action:
       service: light.turn_off
-      entity_id:
-        - light.living_ceiling_level_2_0
-        - light.kitchen_ceiling_level_7_0
+        entity_id:
+          - light.living_ceiling_level_2_0
+          - light.kitchen_ceiling_level_7_0
