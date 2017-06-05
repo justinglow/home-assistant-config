@@ -79,7 +79,7 @@
     action:
       service: notify.pushbullet
       data:
-        message: 'Garage door just opened'
+        message: 'Garage door opened on {{now().strftime("%-m/%-d at %-I:%M:%S %p")}}'
 
   - alias: Push notification when Kel leaves school
     initial_state: True
@@ -92,7 +92,7 @@
     action:
       service: notify.pushbullet
       data:
-        message: 'Kelley left school'
+        message: 'Kelley left school on {{now().strftime("%-m/%-d at %-I:%M:%S %p")}}'
 
   - alias: Push notification if ATV is down
     initial_state: True
@@ -223,33 +223,6 @@
       entity_id: alarm_control_panel.simplisafe
       service: alarm_control_panel.alarm_disarm
 
-  - alias: Push notification when motion triggered
-    initial_state: True
-    hide_entity: False
-    trigger:
-      platform: state
-      entity_id: binary_sensor.ecolink_unknown_type0004_id0001_sensor_12_0
-      to: 'on'
-      from: 'off'
-    condition:
-        condition: and
-        conditions:
-          - condition: state
-            entity_id: sun.sun
-            state: below_horizon
-          - condition: or
-            conditons:
-              - condition: state
-                entity_id: alarm_control_panel.simplisafe
-                state: 'armed_home'
-              - condition: state
-                entity_id: alarm_control_panel.simplisafe
-                state: 'armed_away'
-    action:
-      service: notify.pushbullet
-      data:
-        message: 'Motion on back porch detected'
-
   - alias: Turn on inside lights when motion outside is detected
     initial_state: True
     hide_entity: False
@@ -259,26 +232,29 @@
       to: 'on'
       from: 'off'
     condition:
-        condition: and
-        conditions:
-          - condition: state
-            entity_id: sun.sun
-            state: below_horizon
-          - condition: or
-            conditons:
-              - condition: state
-                entity_id: alarm_control_panel.simplisafe
-                state: 'armed_home'
-              - condition: state
-                entity_id: alarm_control_panel.simplisafe
-                state: 'armed_away'
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: sun.sun
+          state: below_horizon
+        - condition: or
+          conditions:
+            - condition: state
+              entity_id: alarm_control_panel.simplisafe
+              state: 'armed_home'
+            - condition: state
+              entity_id: alarm_control_panel.simplisafe
+              state: 'armed_away'
     action:
-      service: light.turn_on
-      entity_id:
-        - light.living_ceiling_level_2_0
-        - light.kitchen_ceiling_level_7_0
-      data:
-        brightness: 255
+      - service: light.turn_on
+        entity_id:
+          - light.living_ceiling_level_2_0
+          - light.kitchen_ceiling_level_7_0
+        data:
+          brightness: 255
+      - service: notify.pushbullet
+        data:
+          message: 'Back porch motion detected on {{now().strftime("%-m/%-d at %-I:%M:%S %p")}}'
 
   - alias: Turn inside lights off after 1 minute of inactivity
     trigger:
@@ -288,21 +264,21 @@
       for:
         minutes: 1
     condition:
-        condition: and
-        conditions:
-          - condition: state
-            entity_id: sun.sun
-            state: below_horizon
-          - condition: or
-            conditons:
-              - condition: state
-                entity_id: alarm_control_panel.simplisafe
-                state: 'armed_home'
-              - condition: state
-                entity_id: alarm_control_panel.simplisafe
-                state: 'armed_away'
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: sun.sun
+          state: below_horizon
+        - condition: or
+          conditions:
+            - condition: state
+              entity_id: alarm_control_panel.simplisafe
+              state: 'armed_home'
+            - condition: state
+              entity_id: alarm_control_panel.simplisafe
+              state: 'armed_away'
     action:
-      service: light.turn_off
+      - service: light.turn_off
         entity_id:
           - light.living_ceiling_level_2_0
           - light.kitchen_ceiling_level_7_0

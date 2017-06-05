@@ -62,6 +62,8 @@ mqtt:
 sensor:
   - platform: darksky
     api_key: !secret darksky_api_key
+    latitude: !secret latitude
+    longitude: !secret longitude
     monitored_conditions:
       - temperature
       - temperature_max
@@ -69,6 +71,7 @@ sensor:
       - humidity
       - precip_probability
       - cloud_cover
+      - precip_type
   - platform: template
     sensors:
       garage_door_status:

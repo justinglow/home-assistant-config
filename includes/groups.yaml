@@ -70,6 +70,7 @@
       - sensor.dark_sky_humidity
       - sensor.dark_sky_precip_probability
       - sensor.dark_sky_cloud_coverage
+      - sensor.dark_sky_precip
       - sun.sun
   outside_lights:
     name: Outside
