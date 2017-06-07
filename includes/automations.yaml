@@ -298,3 +298,92 @@
         entity_id:
           - light.living_ceiling_level_2_0
           - light.kitchen_ceiling_level_7_0
+
+
+################################################
+## vacation
+################################################
+
+  - alias: Vacation scene 1 trigger
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: time
+      after: '20:13:00'
+    condition:
+      condition: state
+      entity_id: input_boolean.vacation_mode
+      state: 'on'
+    action:
+      service: scene.turn_on
+      entity_id: scene.vacation_1
+
+  - alias: Vacation scene 2 trigger
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: time
+      after: '21:06:00'
+    condition:
+      condition: state
+      entity_id: input_boolean.vacation_mode
+      state: 'on'
+    action:
+      service: scene.turn_on
+      entity_id: scene.vacation_2
+
+  - alias: Vacation scene 3 trigger
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: time
+      after: '22:26:00'
+    condition:
+      condition: state
+      entity_id: input_boolean.vacation_mode
+      state: 'on'
+    action:
+      service: scene.turn_on
+      entity_id: scene.vacation_3
+
+  - alias: Vacation scene 4 trigger
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: time
+      after: '23:26:00'
+    condition:
+      condition: state
+      entity_id: input_boolean.vacation_mode
+      state: 'on'
+    action:
+      service: scene.turn_on
+      entity_id: scene.bedtime
+
+  - alias: Vacation scene 5 trigger
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: time
+      after: '00:14:00'
+    condition:
+      condition: state
+      entity_id: input_boolean.vacation_mode
+      state: 'on'
+    action:
+      service: scene.turn_on
+      entity_id: scene.all_off
+
+  - alias: Vacation all off trigger
+    initial_state: True
+    hide_entity: False
+    trigger:
+      platform: sun
+      event: sunrise
+    condition:
+      condition: state
+      entity_id: input_boolean.vacation_mode
+      state: 'on'
+    action:
+      service: scene.turn_on
+      entity_id: scene.vacation_all_off

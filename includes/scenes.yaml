@@ -102,3 +102,63 @@
       state: on
       brightness: 127.5
     light.blooms: off
+
+- name: Vacation 1
+  entities:
+    light.living_ceiling_level_2_0: off
+    light.the_lamp: on
+    switch.wemo_switch: off
+    light.cafe_level_5_0: on
+    light.island_lights_level_6_0: off
+    light.kitchen_ceiling_level_7_0: on
+    switch.kitchen_under_ca_switch_8_0: off
+    light.hallway2_level_11_0: on
+    light.hallway1_level_10_0: off
+    light.dining_level_9_0: on
+    light.blooms: off
+    light.playroom: off
+
+- name: Vacation 2
+  entities:
+    light.living_ceiling_level_2_0: on
+    light.the_lamp: off
+    switch.wemo_switch: on
+    light.cafe_level_5_0: off
+    light.island_lights_level_6_0: on
+    light.kitchen_ceiling_level_7_0: off
+    switch.kitchen_under_ca_switch_8_0: on
+    light.hallway2_level_11_0: off
+    light.hallway1_level_10_0: on
+    light.dining_level_9_0: off
+    light.blooms: off
+    light.playroom: on
+
+- name: Vacation 3
+  entities:
+    light.living_ceiling_level_2_0: off
+    light.the_lamp: off
+    switch.wemo_switch: on
+    light.cafe_level_5_0: off
+    light.island_lights_level_6_0: off
+    light.kitchen_ceiling_level_7_0: off
+    switch.kitchen_under_ca_switch_8_0: on
+    light.hallway2_level_11_0: off
+    light.hallway1_level_10_0: off
+    light.dining_level_9_0: off
+    light.blooms: off
+    light.playroom: on
+
+- name: Vacation all off
+  entities:
+    light.living_ceiling_level_2_0: off
+    light.the_lamp: off
+    switch.wemo_switch: off
+    light.cafe_level_5_0: off
+    light.island_lights_level_6_0: off
+    light.kitchen_ceiling_level_7_0: off
+    switch.kitchen_under_ca_switch_8_0: off
+    light.hallway2_level_11_0: off
+    light.hallway1_level_10_0: off
+    light.dining_level_9_0: off
+    light.blooms: off
+    light.playroom: off
