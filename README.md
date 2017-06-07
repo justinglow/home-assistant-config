@@ -1,6 +1,6 @@
 # Home Assistant Config
 
-Hey! This is my Home Assistant configuration. [https://home-assistant.io/](Home Assistant) is an open source home automation platform that runs on my Raspberry Pi and acts as the brains/controller for a myriad of devices laid out below. What's great about having Home Assistant at the center of everything is you can mix and match devices and it treats them all the same. This keeps me from being locked to any one smart home vendor. Great job!
+Hey! This is my Home Assistant configuration. [Home Assistant](https://home-assistant.io/) is an open source home automation platform that runs on my Raspberry Pi and acts as the brains/controller for a myriad of devices laid out below. What's great about having Home Assistant at the center of everything is you can mix and match devices and it treats them all the same. This keeps me from being locked to any one smart home vendor. Great job!
 
 Under the screenshot of the front-end below you'll find the devices I'm using, the automations I have running, as well as some video examples. You can also browse through my configuration files above to see how I'm doing everything.
 
