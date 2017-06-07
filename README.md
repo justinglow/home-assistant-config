@@ -1,14 +1,16 @@
 # Home Assistant Config
 
-Hey! This is my Home Assistant configuration. Under the screenshot of the front-end below you'll find the devices I'm using, the automations I have running, as well as some video examples. You can also browse through my configuration files above to see how I'm doing everything.
+Hey! This is my Home Assistant configuration. [https://home-assistant.io/](Home Assistant) is an open source home automation platform that runs on my Raspberry Pi and acts as the brains/controller for a myriad of devices laid out below. What's great about having Home Assistant at the center of everything is you can mix and match devices and it treats them all the same. This keeps me from being locked to any one smart home vendor. Great job!
+
+Under the screenshot of the front-end below you'll find the devices I'm using, the automations I have running, as well as some video examples. You can also browse through my configuration files above to see how I'm doing everything.
 
 I am very regularly adding new devices, automations, and configurations. I'll keep this readme updated with the latest.
 
-![Home Assistant front-end](http://i.imgur.com/buFzIfi.png)
+![Home Assistant front-end](http://i.imgur.com/kChCyzL.png)
 
 # Devices
 
-Here's the stuff I use to control my home. It's a mixture of Z Wave and Wifi devices, all controlled by Home Assistant and the Amazon Echo for voice, plus some other misc things thrown in the mix. What's great about having Home Assistant at the center of everything is you can mix and match devices and it treats them all the same. This keeps me from being locked to any one smart home vendor. Great job!
+Here's the stuff I use to control my home. It's a mixture of Z Wave and Wifi devices, all controlled by Home Assistant and the Amazon Echo for voice, plus some other misc things thrown in the mix.
 
 ## Controller
 * Raspberry Pi 3 running Home Assistant
