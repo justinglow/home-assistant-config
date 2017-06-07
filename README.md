@@ -63,9 +63,4 @@ Here's the stuff I use to control my home. It's a mixture of Z Wave and Wifi dev
 
 # Coming soon
 
-* ~~Ecobee4 + sensors for upstairs~~
-* ~~Z Wave dimmer for back porch lights plus motion sensor for security~~
-* ~~Vacation mode~~
-* Z Wave switch for fireplace
-* Randomize Hue Bloom colors each time a scene triggers them from off to on
-* More accurate and frequent presence detection
+I keep my [backlog](https://trello.com/b/cajFI9pY/hass) in Trello.
