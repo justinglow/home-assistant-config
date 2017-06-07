@@ -186,3 +186,7 @@ script:
       service: script.turn_off
       data:
         entity_id: script.light_loop
+
+input_boolean:
+  vacation_mode:
+    initial: off

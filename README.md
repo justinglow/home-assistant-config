@@ -27,7 +27,7 @@ Here's the stuff I use to control my home. It's a mixture of Z Wave and Wifi dev
 * Amazon Echo dot
 
 ## Presence detection
-* Google Nexus 5X (2)
+* Google Nexus 5X (x2)
 * Owntracks via MQTT (CloudMQTT)
 
 ## Misc

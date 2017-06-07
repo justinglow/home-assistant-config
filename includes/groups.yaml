@@ -16,6 +16,7 @@
     entities:
       - device_tracker.kphone_kelley_phone
       - device_tracker.phone_justin_phone
+      - input_boolean.vacation_mode
       - sensor.garage_door_status
       - cover.garage_door_opener
       - sensor.upstairs_temperature

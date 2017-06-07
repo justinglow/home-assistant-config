@@ -8,6 +8,10 @@
     trigger:
       platform: time
       after: '06:45:00'
+    condition:
+      condition: state
+      entity_id: input_boolean.vacation_mode
+      state: 'off'
     action:
       service: scene.turn_on
       entity_id: scene.morning
@@ -35,6 +39,10 @@
     trigger:
       platform: time
       after: '16:30:00'
+    condition:
+      condition: state
+      entity_id: input_boolean.vacation_mode
+      state: 'off'
     action:
       service: scene.turn_on
       entity_id: scene.evening
@@ -64,6 +72,10 @@
     trigger:
       platform: time
       after: '23:30:00'
+    condition:
+      condition: state
+      entity_id: input_boolean.vacation_mode
+      state: 'off'
     action:
      service: scene.turn_on
      entity_id: scene.all_off
@@ -219,6 +231,10 @@
     trigger:
       platform: time
       after: '06:45:00'
+    condition:
+      condition: state
+      entity_id: alarm_control_panel.simplisafe
+      state: 'armed_home'
     action:
       entity_id: alarm_control_panel.simplisafe
       service: alarm_control_panel.alarm_disarm
