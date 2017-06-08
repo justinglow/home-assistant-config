@@ -142,6 +142,8 @@
     friendly_name: Office Chromecast
   media_player.office_tv:
     friendly_name: Office TV
+  media_player.roku_5s4640042419:
+    friendly_name: Playroom TV
 
 #security
   script.light_loop_kill:

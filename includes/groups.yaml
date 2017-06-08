@@ -106,3 +106,4 @@
       - sensor.master_humidity
       - sensor.upstairs_temperature
       - sensor.master_temperature
+      - media_player.roku_5s4640042419
