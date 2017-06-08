@@ -53,7 +53,7 @@
     trigger:
       platform: state
       entity_id: alarm_control_panel.simplisafe
-      state: 'armed_home'
+      to: 'armed_home'
     action:
       service: scene.turn_on
       entity_id: scene.bedtime
@@ -62,7 +62,7 @@
     trigger:
       platform: state
       entity_id: alarm_control_panel.simplisafe
-      state: 'armed_trigger'
+      to: 'armed_trigger'
     action:
       service: script.light_loop
 
@@ -112,7 +112,7 @@
     trigger:
       platform: state
       entity_id: media_player.apple_tv
-      state: 'unknown'
+      to: 'unknown'
     action:
       service: notify.pushbullet
       data:
