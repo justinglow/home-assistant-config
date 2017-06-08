@@ -7,7 +7,7 @@
     hide_entity: False
     trigger:
       platform: time
-      after: '06:45:00'
+      at: '06:45:00'
     condition:
       condition: state
       entity_id: input_boolean.vacation_mode
@@ -21,7 +21,7 @@
     hide_entity: False
     trigger:
       platform: time
-      after: '08:45:00'
+      at: '08:45:00'
     condition:
       condition: time
       weekday:
@@ -38,7 +38,7 @@
     initial_state: True
     trigger:
       platform: time
-      after: '16:30:00'
+      at: '16:30:00'
     condition:
       condition: state
       entity_id: input_boolean.vacation_mode
@@ -71,7 +71,7 @@
     hide_entity: False
     trigger:
       platform: time
-      after: '23:30:00'
+      at: '23:30:00'
     condition:
       condition: state
       entity_id: input_boolean.vacation_mode
@@ -139,7 +139,7 @@
       service: scene.turn_on
       entity_id: scene.evening_tv
 
-  - alias: When ATV is playing then paused turm on evening scene
+  - alias: When ATV is playing then paused turn on evening scene
     initial_state: True
     hide_entity: False
     trigger:
@@ -230,7 +230,7 @@
     hide_entity: False
     trigger:
       platform: time
-      after: '06:45:00'
+      at: '06:45:00'
     condition:
       condition: state
       entity_id: alarm_control_panel.simplisafe
@@ -309,7 +309,7 @@
     hide_entity: False
     trigger:
       platform: time
-      after: '20:13:00'
+      at: '20:13:00'
     condition:
       condition: state
       entity_id: input_boolean.vacation_mode
@@ -323,7 +323,7 @@
     hide_entity: False
     trigger:
       platform: time
-      after: '21:06:00'
+      at: '21:06:00'
     condition:
       condition: state
       entity_id: input_boolean.vacation_mode
@@ -337,7 +337,7 @@
     hide_entity: False
     trigger:
       platform: time
-      after: '22:26:00'
+      at: '22:26:00'
     condition:
       condition: state
       entity_id: input_boolean.vacation_mode
@@ -351,7 +351,7 @@
     hide_entity: False
     trigger:
       platform: time
-      after: '23:26:00'
+      at: '23:26:00'
     condition:
       condition: state
       entity_id: input_boolean.vacation_mode
@@ -365,7 +365,7 @@
     hide_entity: False
     trigger:
       platform: time
-      after: '00:14:00'
+      at: '00:14:00'
     condition:
       condition: state
       entity_id: input_boolean.vacation_mode

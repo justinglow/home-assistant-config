@@ -54,7 +54,7 @@
     light.dining_level_9_0: off
     light.blooms:
       state: on
-      rgb_color: [211, 242, 255]
+      rgb_color: ['{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}', '{{ (range(0, 255)|random) }}']
 
 - name: Evening_TV_paused
   entities:
