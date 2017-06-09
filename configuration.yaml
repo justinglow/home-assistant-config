@@ -124,7 +124,6 @@ media_player:
 
 
 
-
 #includes
 
 automation: !include includes/automations.yaml
