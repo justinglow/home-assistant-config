@@ -122,8 +122,6 @@ media_player:
     host: 192.168.1.136
     login_id: 00000000-05a4-3ddf-e243-4e630a6c4355
 
-
-
 #includes
 
 automation: !include includes/automations.yaml
