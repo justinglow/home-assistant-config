@@ -15,11 +15,11 @@ zone:
   radius: 300
 
 zone 2:
-  name: Kid's school
+  name: St. Lucas
   latitude: !secret school-latitude
   longitude: !secret school-longitude
   icon: mdi:school
-  radius: 300
+  radius: 200
 
 zone 3:
   name: Maryville
@@ -27,6 +27,13 @@ zone 3:
   longitude: !secret kschool-longitude
   icon: mdi:medical-bag
   radius: 500
+
+zone 4:
+  name: St. Catharine
+  latitude: !secret school2-latitude
+  longitude: !secret school2-longitude
+  icon: mdi:school
+  radius: 200
 
 frontend:
 updater:
@@ -43,7 +50,7 @@ sun:
 notify:
   - name: pushbullet
     platform: pushbullet
-    api_key: o.mlOjBV1EWxdMMRhi0StjGIAvEa1xGZjy
+    api_key: !secret pushbullet_api_key
 
 ifttt:
   key: !secret ifttt-api
@@ -86,7 +93,7 @@ ecobee:
 
 cover:
   - platform: myq
-    username: justinglow@gmail.com
+    username: !secret email
     password: !secret myq-password
     type: chamberlain
 
@@ -120,7 +127,7 @@ alarm_control_panel:
 media_player:
   - platform: apple_tv
     host: 192.168.1.136
-    login_id: 00000000-05a4-3ddf-e243-4e630a6c4355
+    login_id: !secret apple_tv_login_id
 
 #includes
 
