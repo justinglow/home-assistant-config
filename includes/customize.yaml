@@ -3,7 +3,7 @@
     friendly_name: Small lamp
     icon: mdi:lamp
     emulated_hue: true
-  light.living_ceiling_level_2_0:
+  light.living_ceiling_level:
     friendly_name: Living room ceiling
     emulated_hue: true
   light.light_1:
@@ -18,20 +18,20 @@
     emulated_hue: true
 
 #kitchen
-  light.cafe_level_5_0:
+  light.cafe_level:
     friendly_name: Cafe lights
     emulated_hue: true
     polling_intensity: 1
     refresh_value: 2
     delay: 3
-  light.island_lights_level_6_0:
+  light.island_lights_level:
     friendly_name: Island lights
     emulated_hue: true
-  light.kitchen_ceiling_level_7_0:
+  light.kitchen_ceiling_level:
     friendly_name: Kitchen ceiling
     emulated_hue: true
     hidden: False
-  switch.kitchen_under_ca_switch_8_0:
+  switch.kitchen_under_ca_switch:
     friendly_name: Under cabinet
     emulated_hue: true
     hidden: False
@@ -40,13 +40,13 @@
     emulated_hue: true
 
 #dining room
-  light.dining_level_9_0:
+  light.dining_level:
     friendly_name: Dining room
     emulated_hue: true
     hidden: False
-  light.hallway1_level_10_0:
+  light.hallway1_level:
     friendly_name: Hallway 1
-  light.hallway2_level_11_0:
+  light.hallway2_level:
     friendly_name: Hallway 2
   group.hallway:
     hidden: False
@@ -56,23 +56,34 @@
 
 
 #outside
-  switch.porch_switch_3_0:
+  switch.porch_switch:
     friendly_name: Porch light
     icon: mdi:home-variant
-  switch.coach_switch_4_0:
+  switch.coach_switch:
     friendly_name: Coach lights
     icon: mdi:home-variant
   cover.garage_door_opener:
     hidden: False
     friendly_name: Garage door control
     icon: mdi:garage
-  binary_sensor.ecolink_unknown_type0004_id0001_sensor_12_0:
-    friendly_name: Back porch motion
+  binary_sensor.ecolink_unknown_type0004_id0001_sensor:
+    friendly_name: Back motion
     device_class: motion
+  sensor.amcrest_camera_motion_detected:
+    friendly_name: Front motion
+    device_class: motion
+  camera.amcrest_camera:
+    friendly_name: Front view
+  camera.amcrest_camera_2:
+    friendly_name: Back view
 
 #upstairs
   light.playroom:
     friendly_name: Playroom
+    emulated_hue: true
+    icon: mdi:lamp
+  switch.bedroom_lights:
+    friendly_name: Bedroom lights
     emulated_hue: true
     icon: mdi:lamp
 
@@ -80,7 +91,7 @@
   #device tracking
   device_tracker.wemo_switch:
     hidden: true
-  device_tracker.phone_justin_phone:
+  device_tracker.phone_jg:
     friendly_name: Justin
     track: true
     hide_if_away: no

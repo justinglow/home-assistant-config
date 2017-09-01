@@ -14,13 +14,15 @@
     name: House
     view: no
     entities:
+      - device_tracker.phone_jg
       - device_tracker.kphone_kelley_phone
-      - device_tracker.phone_justin_phone
       - input_boolean.vacation_mode
       - sensor.garage_door_status
       - cover.garage_door_opener
       - sensor.upstairs_temperature
+      - sensor.master_temperature
       - sensor.downstairs_temperature
+      - sensor.master_humidity
       - sensor.downstairs_humidity
       - alarm_control_panel.simplisafe
   automations:
@@ -33,7 +35,7 @@
     name: Living room
     view: no
     entities:
-      - light.living_ceiling_level_2_0
+      - light.living_ceiling_level
       - light.the_lamp
       - switch.wemo_switch
       - light.blooms
@@ -42,25 +44,25 @@
     name: Kitchen
     view: no
     entities:
-      - light.cafe_level_5_0
-      - light.island_lights_level_6_0
-      - light.kitchen_ceiling_level_7_0
-      - switch.kitchen_under_ca_switch_8_0
+      - light.cafe_level
+      - light.island_lights_level
+      - light.kitchen_ceiling_level
+      - switch.kitchen_under_ca_switch
   all_lights:
     name: All lights
     view: no
     entities:
-      - light.living_ceiling_level_2_0
+      - light.living_ceiling_level
       - switch.wemo_switch
       - light.the_lamp
-      - light.cafe_level_5_0
-      - light.kitchen_ceiling_level_7_0
-      - light.dining_level_9_0
-      - light.hallway1_level_10_0
-      - light.hallway2_level_11_0
-      - switch.kitchen_under_ca_switch_8_0
+      - light.cafe_level
+      - light.kitchen_ceiling_level
+      - light.dining_level
+      - light.hallway1_level
+      - light.hallway2_level
+      - switch.kitchen_under_ca_switch
       - light.playroom
-      - light.island_lights_level_6_0
+      - light.island_lights_level
   weather:
     name: Weather
     view: no
@@ -77,21 +79,25 @@
     name: Outside
     view: no
     entities:
-      - switch.porch_switch_3_0
-      - switch.coach_switch_4_0
-      - binary_sensor.ecolink_unknown_type0004_id0001_sensor_12_0
+      - camera.amcrest_camera
+      - switch.porch_switch
+      - switch.coach_switch
+      - sensor.amcrest_camera_motion_detected
+      - binary_sensor.ecolink_unknown_type0004_id0001_sensor
+      - sensor.dark_sky_temperature
+      - camera.amcrest_camera_2
   dining_room:
     name: Dining room
     view: no
     entities:
-      - light.dining_level_9_0
+      - light.dining_level
       - group.hallway
   hallway:
     name: Hallway
     view: no
     entities:
-      - light.hallway1_level_10_0
-      - light.hallway2_level_11_0
+      - light.hallway1_level
+      - light.hallway2_level
   blooms:
     name: The Blooms
     view: no
@@ -106,3 +112,4 @@
       - sensor.master_humidity
       - sensor.upstairs_temperature
       - sensor.master_temperature
+      - switch.bedroom_lights

@@ -6,7 +6,7 @@ Under the screenshot of the front-end below you'll find the devices I'm using, t
 
 I am very regularly adding new devices, automations, and configurations. I'll keep this readme updated with the latest.
 
-![Home Assistant front-end](http://i.imgur.com/kChCyzL.png)
+![Home Assistant front-end](http://i.imgur.com/R2nFJlf.png)
 
 # Devices
 

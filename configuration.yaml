@@ -99,9 +99,13 @@ cover:
 
 wemo:
 
+switch:
+  - platform: tplink
+    host: 192.168.1.115
+
 light:
   - platform: hue
-    host: 192.168.1.108
+    host: 192.168.1.105
   - platform: yeelight
     devices:
       192.168.1.137:
@@ -124,10 +128,20 @@ alarm_control_panel:
   username: !secret simplisafe_username
   password: !secret simplisafe_password
 
-media_player:
-  - platform: apple_tv
-    host: 192.168.1.136
+apple_tv:
+  - name: Apple TV
+    host: 192.168.1.129
     login_id: !secret apple_tv_login_id
+
+amcrest:
+  - host: 192.168.1.125
+    username: admin
+    password: admin
+  - host: 192.168.1.102
+    username: admin
+    password: admin
+
+
 
 #includes
 
@@ -144,35 +158,35 @@ script:
       - service: homeassistant.turn_on
         data:
           entity_id:
-            - light.living_ceiling_level_2_0
+            - light.living_ceiling_level
             - switch.wemo_switch
             - light.the_lamp
-            - light.cafe_level_5_0
+            - light.cafe_level
             - light.island_level_11_0
-            - light.kitchen_ceiling_level_7_0
-            - light.dining_level_9_0
-            - light.hallway1_level_10_0
-            - light.hallway2_level_11_0
-            - switch.kitchen_under_ca_switch_8_0
-            - switch.porch_switch_3_0
-            - switch.coach_switch_4_0
+            - light.kitchen_ceiling_level
+            - light.dining_level
+            - light.hallway1_level
+            - light.hallway2_level
+            - switch.kitchen_under_ca_switch
+            - switch.porch_switch
+            - switch.coach_switch
       - delay:
           seconds: 1
       - service: homeassistant.turn_off
         data:
           entity_id:
-            - light.living_ceiling_level_2_0
+            - light.living_ceiling_level
             - switch.wemo_switch
             - light.the_lamp
-            - light.cafe_level_5_0
+            - light.cafe_level
             - light.island_level_11_0
-            - light.kitchen_ceiling_level_7_0
-            - light.dining_level_9_0
-            - light.hallway1_level_10_0
-            - light.hallway2_level_11_0
-            - switch.kitchen_under_ca_switch_8_0
-            - switch.porch_switch_3_0
-            - switch.coach_switch_4_0
+            - light.kitchen_ceiling_level
+            - light.dining_level
+            - light.hallway1_level
+            - light.hallway2_level
+            - switch.kitchen_under_ca_switch
+            - switch.porch_switch
+            - switch.coach_switch
       - service: script.turn_on
         data:
           entity_id: script.light_loop

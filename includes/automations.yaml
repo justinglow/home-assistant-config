@@ -81,7 +81,7 @@
      entity_id: scene.all_off
 
   - alias: Push notification when garage door opens
-    initial_state: True
+    initial_state: False
     hide_entity: False
     trigger:
       platform: state
@@ -174,48 +174,24 @@
     action:
       - service: switch.turn_off
         entity_id:
-          - switch.porch_switch_3_0
-          - switch.coach_switch_4_0
+          - switch.porch_switch
+          - switch.coach_switch
       - service: light.turn_off
         entity_id:
           - light.playroom
 
-  - alias: Lights on at sunset, low cloud cover
+  - alias: Lights on at sunset
     initial_state: True
     hide_entity: False
     trigger:
       platform: sun
       event: sunset
-      offset: "-00:30:00"
-    condition:
-      condition: numeric_state
-      entity_id: sensor.dark_sky_cloud_coverage
-      below: '75'
+      offset: "-01:30:00"
     action:
       - service: switch.turn_on
         entity_id:
-          - switch.porch_switch_3_0
-          - switch.coach_switch_4_0
-      - service: light.turn_on
-        entity_id:
-          - light.playroom
-
-  - alias: Lights on at sunset, high cloud cover
-    initial_state: True
-    hide_entity: False
-    trigger:
-      platform: sun
-      event: sunset
-      offset: "-02:30:00"
-    condition:
-      condition: numeric_state
-      entity_id: sensor.dark_sky_cloud_coverage
-      above: '75'
-    action:
-      - service: switch.turn_on
-        entity_id:
-          - switch.porch_switch_3_0
-          - switch.coach_switch_4_0
+          - switch.porch_switch
+          - switch.coach_switch
       - service: light.turn_on
         entity_id:
           - light.playroom
@@ -230,7 +206,7 @@
     hide_entity: False
     trigger:
       platform: time
-      at: '05:45:00'
+      at: '06:00:00'
     condition:
       condition: state
       entity_id: alarm_control_panel.simplisafe
@@ -244,7 +220,7 @@
     hide_entity: False
     trigger:
       platform: state
-      entity_id: binary_sensor.ecolink_unknown_type0004_id0001_sensor_12_0
+      entity_id: binary_sensor.ecolink_unknown_type0004_id0001_sensor
       to: 'on'
       from: 'off'
     condition:
@@ -264,8 +240,8 @@
     action:
       - service: light.turn_on
         entity_id:
-          - light.living_ceiling_level_2_0
-          - light.kitchen_ceiling_level_7_0
+          - light.living_ceiling_level
+          - light.kitchen_ceiling_level
         data:
           brightness: 255
       - service: notify.pushbullet
@@ -275,7 +251,7 @@
   - alias: Turn inside lights off after 1 minute of inactivity
     trigger:
       platform: state
-      entity_id: binary_sensor.ecolink_unknown_type0004_id0001_sensor_12_0
+      entity_id: binary_sensor.ecolink_unknown_type0004_id0001_sensor
       to: 'off'
       for:
         minutes: 1
@@ -296,8 +272,8 @@
     action:
       - service: light.turn_off
         entity_id:
-          - light.living_ceiling_level_2_0
-          - light.kitchen_ceiling_level_7_0
+          - light.living_ceiling_level
+          - light.kitchen_ceiling_level
 
 
 ################################################
