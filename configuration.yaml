@@ -136,10 +136,10 @@ apple_tv:
 amcrest:
   - host: 192.168.1.125
     username: admin
-    password: admin
+    password: !secret amcrest_password
   - host: 192.168.1.102
     username: admin
-    password: admin
+    password: !secret amcrest_password
 
 
 
@@ -208,3 +208,10 @@ script:
 input_boolean:
   vacation_mode:
     initial: off
+
+logger:
+  default: warning
+  logs:
+    homeassistant.components.media_player.apple_tv.pyatv.net: debug
+    homeassistant.components.media_player.apple_tv.pyatv.daap: debug
+    homeassistant.components.media_player.apple_tv.pyatv.internal.apple_tv: debug
