@@ -2,12 +2,12 @@
 ## inside lights
 ################################################
 
-  - alias: Lights on in the morning
+  - alias: Lights on in the morning on weekdays
     initial_state: True
     hide_entity: False
     trigger:
       platform: time
-      at: '06:45:00'
+      at: '06:00:00'
     condition:
       condition: state
       entity_id: input_boolean.vacation_mode
@@ -21,7 +21,7 @@
     hide_entity: False
     trigger:
       platform: time
-      at: '08:45:00'
+      at: '08:00:00'
     condition:
       condition: time
       weekday:
@@ -34,11 +34,30 @@
       service: scene.turn_on
       entity_id: scene.all_off
 
-  - alias: Lights on at 4:30
+  - alias: Bedroom lights on in the morning on weekdys
     initial_state: True
+    hide_entity: False
     trigger:
       platform: time
-      at: '16:30:00'
+      at: '06:15:00'
+    condition:
+      condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    action:
+      service: switch.turn_on
+      entity_id: switch.bedroom_lights
+
+  - alias: Lights on 60 minutes before sunset
+    initial_state: True
+    trigger:
+      platform: sun
+      event: sunset
+      offset: "-01:00:00"
     condition:
       condition: state
       entity_id: input_boolean.vacation_mode
@@ -81,7 +100,7 @@
      entity_id: scene.all_off
 
   - alias: Push notification when garage door opens
-    initial_state: False
+    initial_state: True
     hide_entity: False
     trigger:
       platform: state
@@ -89,22 +108,10 @@
       to: 'open'
       from: 'closed'
     action:
-      service: notify.pushbullet
+      service: tts.google_say
+      entity_id: media_player.gray_speaker
       data:
-        message: 'Garage door opened on {{now().strftime("%-m/%-d at %-I:%M:%S %p")}}'
-
-  - alias: Push notification when Kel leaves school
-    initial_state: True
-    hide_entity: False
-    trigger:
-      platform: state
-      entity_id: device_tracker.kphone_kelley_phone
-      to: 'not_home'
-      from: 'Maryville'
-    action:
-      service: notify.pushbullet
-      data:
-        message: 'Kelley left school on {{now().strftime("%-m/%-d at %-I:%M:%S %p")}}'
+        message: 'Your garodge door just opened!'
 
   - alias: Push notification if ATV is down
     initial_state: True
@@ -135,6 +142,7 @@
         - tue
         - wed
         - thu
+        - fri
     action:
       service: scene.turn_on
       entity_id: scene.evening_tv
@@ -179,6 +187,7 @@
       - service: light.turn_off
         entity_id:
           - light.playroom
+          - light.ge_unknown_type4944_id3130_level
 
   - alias: Lights on at sunset
     initial_state: True
@@ -186,7 +195,7 @@
     trigger:
       platform: sun
       event: sunset
-      offset: "-01:30:00"
+      offset: "-01:00:00"
     action:
       - service: switch.turn_on
         entity_id:
@@ -195,6 +204,9 @@
       - service: light.turn_on
         entity_id:
           - light.playroom
+          - light.ge_unknown_type4944_id3130_level
+        data:
+          brightness: 100
 
 
 ################################################
@@ -242,6 +254,7 @@
         entity_id:
           - light.living_ceiling_level
           - light.kitchen_ceiling_level
+          - light.ge_unknown_type4944_id3130_level
         data:
           brightness: 255
       - service: notify.pushbullet
@@ -274,6 +287,7 @@
         entity_id:
           - light.living_ceiling_level
           - light.kitchen_ceiling_level
+          - light.ge_unknown_type4944_id3130_level
 
 
 ################################################

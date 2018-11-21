@@ -1,15 +1,26 @@
   default_view:
     view: yes
     entities:
+      - group.outside_lights
       - group.living
       - group.family
       - group.weather
       - group.kitchen
       - group.house
-      - group.outside_lights
       - media_player.apple_tv
       - group.dining_room
       - group.upstairs
+  outside_lights:
+    name: Outside
+    view: no
+    entities:
+      - switch.porch_switch
+      - switch.coach_switch
+      - light.ge_unknown_type4944_id3130_level
+      - binary_sensor.ecolink_unknown_type0004_id0001_sensor
+      - sensor.dark_sky_temperature
+      - camera.amcrest_camera
+      - camera.amcrest_camera_2
   house:
     name: House
     view: no
@@ -37,8 +48,9 @@
     entities:
       - light.living_ceiling_level
       - light.the_lamp
-      - switch.wemo_switch
       - light.blooms
+      - light.small_lamp
+      - switch.wemo_switch
       - sensor.living_room_temperature
   kitchen:
     name: Kitchen
@@ -63,6 +75,10 @@
       - switch.kitchen_under_ca_switch
       - light.playroom
       - light.island_lights_level
+      - light.small_lamp
+      - light.mudroom
+      - switch.wemo_switch
+
   weather:
     name: Weather
     view: no
@@ -75,23 +91,16 @@
       - sensor.dark_sky_cloud_coverage
       - sensor.dark_sky_precip
       - sun.sun
-  outside_lights:
-    name: Outside
-    view: no
-    entities:
-      - camera.amcrest_camera
-      - switch.porch_switch
-      - switch.coach_switch
-      - sensor.amcrest_camera_motion_detected
-      - binary_sensor.ecolink_unknown_type0004_id0001_sensor
-      - sensor.dark_sky_temperature
-      - camera.amcrest_camera_2
+
+
   dining_room:
-    name: Dining room
+    name: Downstairs
     view: no
     entities:
       - light.dining_level
       - group.hallway
+      - light.mudroom
+      - switch.wemo_switch
   hallway:
     name: Hallway
     view: no
@@ -113,3 +122,5 @@
       - sensor.upstairs_temperature
       - sensor.master_temperature
       - switch.bedroom_lights
+      - switch.ewans_lamp
+      - switch.islas_room

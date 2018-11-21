@@ -1,6 +1,6 @@
 #living room
   switch.wemo_switch:
-    friendly_name: Small lamp
+    friendly_name: Dining room lamp
     icon: mdi:lamp
     emulated_hue: true
   light.living_ceiling_level:
@@ -16,6 +16,9 @@
     icon: mdi:lamp
   group.living:
     emulated_hue: true
+  light.small_lamp:
+    friendly_name: Small lamp
+    icon: mdi:lamp
 
 #kitchen
   light.cafe_level:
@@ -53,6 +56,10 @@
     friendly_name: Hallway
     icon: mdi:lightbulb
     emulated_hue: true
+  light.mudroom:
+    friendly_name: Mudroom
+    icon: mdi:lightbulb
+
 
 
 #outside
@@ -73,9 +80,11 @@
     friendly_name: Front motion
     device_class: motion
   camera.amcrest_camera:
-    friendly_name: Front view
-  camera.amcrest_camera_2:
-    friendly_name: Back view
+    friendly_name: Front
+  camera.amcrest_camera2:
+    friendly_name: Back
+  light.ge_unknown_type4944_id3130_level:
+    friendly_name: Back porch
 
 #upstairs
   light.playroom:
@@ -86,7 +95,14 @@
     friendly_name: Bedroom lights
     emulated_hue: true
     icon: mdi:lamp
-
+  switch.ewans_lamp:
+    friendly_name: Ewan's lamp
+    icon: mdi:lamp
+    emulated_hue: true
+  switch.islas_room:
+    friendly_name: Isla's lamp
+    icon: mid:lamp
+    emulated_hue: true
 
   #device tracking
   device_tracker.wemo_switch:

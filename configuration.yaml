@@ -58,14 +58,6 @@ ifttt:
 tts:
   platform: google
 
-mqtt:
-  broker: m13.cloudmqtt.com
-  port: 13194
-  username: ha
-  password: !secret cloudmqtt_password
-  client_id: homeassistant
-  keepalive: 60
-
 sensor:
   - platform: darksky
     api_key: !secret darksky_api_key
@@ -78,7 +70,6 @@ sensor:
       - humidity
       - precip_probability
       - cloud_cover
-      - precip_type
   - platform: template
     sensors:
       garage_door_status:
@@ -103,6 +94,14 @@ switch:
   - platform: tplink
     host: 192.168.1.115
 
+switch 2:
+  - platform: tplink
+    host: 192.168.1.119
+
+switch 3:
+  - platform: tplink
+    host: 192.168.1.128
+
 light:
   - platform: hue
     host: 192.168.1.105
@@ -120,9 +119,6 @@ emulated_hue:
   host_ip: 192.168.1.147
   expose_by_default: false
 
-device_tracker:
-  platform: owntracks
-
 alarm_control_panel:
   platform: simplisafe
   username: !secret simplisafe_username
@@ -133,14 +129,24 @@ apple_tv:
     host: 192.168.1.129
     login_id: !secret apple_tv_login_id
 
+camera:
+  - platform: amcrest
+  
 amcrest:
-  - host: 192.168.1.125
+  - host: 192.168.1.124
     username: admin
     password: !secret amcrest_password
   - host: 192.168.1.102
     username: admin
     password: !secret amcrest_password
 
+# amcrest:
+#  - host: 192.168.1.125
+#    username: admin
+#    password: !secret amcrest_password
+#  - host: 192.168.1.102
+#    username: admin
+#    password: !secret amcrest_password
 
 
 #includes
@@ -208,10 +214,3 @@ script:
 input_boolean:
   vacation_mode:
     initial: off
-
-logger:
-  default: warning
-  logs:
-    homeassistant.components.media_player.apple_tv.pyatv.net: debug
-    homeassistant.components.media_player.apple_tv.pyatv.daap: debug
-    homeassistant.components.media_player.apple_tv.pyatv.internal.apple_tv: debug

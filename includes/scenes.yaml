@@ -2,7 +2,7 @@
   entities:
     light.living_ceiling_level: off
     light.the_lamp: off
-    switch.wemo_switch: off
+    light.small_lamp: off
     light.kitchen_ceiling_level: off
     light.cafe_level: off
     light.island_lights_level: off
@@ -21,21 +21,24 @@
     light.playroom:
       state: on
       brightness: 50
+    switch.wemo_switch: on
 
 - name: All_off
   entities:
     light.living_ceiling_level: off
     light.the_lamp: off
-    switch.wemo_switch: off
+    light.small_lamp: off
     light.cafe_level: off
     light.island_lights_level: off
     light.kitchen_ceiling_level: off
-    switch.kitchen_under_ca_switch: on
+    switch.kitchen_under_ca_switch: off
     light.hallway2_level: off
     light.hallway1_level: off
     light.dining_level: off
     light.blooms: off
     switch.bedroom_lights: off
+    light.mudroom: off
+    switch.wemo_switch: off
 
 
 - name: Evening_TV
@@ -43,7 +46,7 @@
     light.living_ceiling_level: off
     light.kitchen_ceiling_level: off
     light.the_lamp: off
-    switch.wemo_switch: off
+    light.small_lamp: off
     switch.kitchen_under_ca_switch: on
     light.cafe_level: off
     light.island_lights_level: off
@@ -62,10 +65,10 @@
   entities:
     light.living_ceiling_level:
       state: on
-      brightness: 127.5
+      brightness: 25
     light.kitchen_ceiling_level:
       state: on
-      brightness: 127.5
+      brightness: 25
 
 - name: Morning
   entities:
@@ -73,16 +76,24 @@
     light.the_lamp:
       state: on
       brightness: 127.5
-    switch.wemo_switch: on
+    light.small_lamp: on
     light.cafe_level: on
     light.island_lights_level: on
     light.kitchen_ceiling_level: off
-    switch.kitchen_under_ca_switch: off
-    light.hallway2_level: off
-    light.hallway1_level: off
+    switch.kitchen_under_ca_switch: on
+    light.hallway2_level:
+      state: on
+      brightness: 40
+    light.hallway1_level:
+      state: on
+      brightness: 40
     light.dining_level: off
     light.blooms: off
-    light.playroom: off
+    light.mudroom:
+      state: on
+      brightness: 127.5
+    switch.wemo_switch: on
+
 
 - name: Evening
   entities:
@@ -93,7 +104,7 @@
     light.the_lamp:
       state: on
       brightness: 127.5
-    switch.wemo_switch: on
+    light.small_lamp: on
     switch.kitchen_under_ca_switch: on
     light.cafe_level: off
     light.island_lights_level: on
@@ -104,12 +115,18 @@
       state: on
       brightness: 127.5
     light.blooms: off
+    light.mudroom:
+      state: on
+      brightness: 127.5
+    switch.wemo_switch: on
+    switch.ewans_lamp: on
+    switch.islas_room: on
 
 - name: Vacation 1
   entities:
     light.living_ceiling_level: off
     light.the_lamp: on
-    switch.wemo_switch: off
+    light.small_lamp: off
     light.cafe_level: on
     light.island_lights_level: off
     light.kitchen_ceiling_level: on
@@ -124,7 +141,7 @@
   entities:
     light.living_ceiling_level: on
     light.the_lamp: off
-    switch.wemo_switch: on
+    light.small_lamp: on
     light.cafe_level: off
     light.island_lights_level: on
     light.kitchen_ceiling_level: off
@@ -139,7 +156,7 @@
   entities:
     light.living_ceiling_level: off
     light.the_lamp: off
-    switch.wemo_switch: on
+    light.small_lamp: on
     light.cafe_level: off
     light.island_lights_level: off
     light.kitchen_ceiling_level: off
@@ -154,7 +171,7 @@
   entities:
     light.living_ceiling_level: off
     light.the_lamp: off
-    switch.wemo_switch: off
+    light.small_lamp: off
     light.cafe_level: off
     light.island_lights_level: off
     light.kitchen_ceiling_level: off
